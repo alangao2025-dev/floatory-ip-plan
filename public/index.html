@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLOATORY 浮空成像 IP 文创周边｜海外品牌营销计划（北美·欧洲·中东·东南亚）</title>
+<meta name="description" content="基于微纳无源浮空成像技术的 IP 文创周边出海品牌营销计划：战略、战术、执行、控制；可调整年度预算。">
+<style>
+:root{
+  --bg:#0b0f1a; --bg2:#111729; --card:#ffffff; --ink:#1b2133; --ink2:#4a5370; --mute:#7a839e;
+  --line:#e6e9f2; --soft:#f5f7fc; --accent:#5b5bf7; --accent2:#18c3d6; --hot:#ff5c8a; --gold:#f5b942;
+  --ok:#16a36b; --warn:#e8912d; --bad:#d64545;
+  --grad:linear-gradient(120deg,#5b5bf7 0%,#8b5cf6 45%,#18c3d6 100%);
+  --r:14px; --shadow:0 6px 24px rgba(20,27,58,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--soft);line-height:1.7;font-size:15px}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+/* ---------- layout ---------- */
+.side{position:fixed;top:0;left:0;bottom:0;width:248px;background:var(--bg);color:#cfd5ea;overflow-y:auto;padding:22px 14px 40px;z-index:20}
+.side .logo{font-weight:800;letter-spacing:.12em;font-size:18px;color:#fff;margin:0 8px 2px}
+.side .logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.side .sub{font-size:11.5px;color:#7f88a8;margin:0 8px 18px}
+.side a{display:block;color:#b9c1dc;padding:6px 10px;border-radius:8px;font-size:13.2px;line-height:1.45}
+.side a:hover{background:#1a2240;color:#fff;text-decoration:none}
+.side a.active{background:#222c52;color:#fff}
+.side .grp{font-size:11px;color:#69739a;margin:16px 10px 4px;letter-spacing:.08em}
+.side .mini-budget{margin:18px 8px 0;padding:12px;border-radius:10px;background:#141b33;border:1px solid #232c4d;font-size:12.5px}
+.side .mini-budget b{color:#fff;font-size:18px;display:block}
+main{margin-left:248px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 34px}
+section.sec{padding:46px 0 18px;border-bottom:1px solid var(--line)}
+.sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.sec-h .no{font-size:13px;font-weight:700;color:#fff;background:var(--grad);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.sec-h h2{font-size:26px;margin:0;letter-spacing:.01em}
+.sec-lead{color:var(--ink2);margin:4px 0 22px;max-width:920px}
+h3{font-size:18px;margin:28px 0 10px;display:flex;align-items:center;gap:8px}
+h3::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--grad);display:inline-block}
+h4{font-size:15px;margin:16px 0 6px;color:var(--ink)}
+p{margin:6px 0 10px}
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1200px 500px at 80% -10%,#2b2f8f 0%,transparent 60%),radial-gradient(900px 500px at 0% 120%,#0d5d6b 0%,transparent 55%),var(--bg);color:#fff;padding:64px 0 54px;position:relative;overflow:hidden}
+.hero .tag{display:inline-block;font-size:12px;letter-spacing:.14em;color:#9fb0ff;border:1px solid #3a4486;border-radius:999px;padding:4px 12px;margin-bottom:16px}
+.hero h1{font-size:40px;line-height:1.25;margin:0 0 12px;max-width:820px}
+.hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:#c3cbe6;font-size:16.5px;max-width:780px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px 26px;color:#8f9bc4;font-size:13px;margin-top:18px}
+.float-demo{position:absolute;right:6%;top:58px;width:250px;height:250px;perspective:900px}
+.float-demo .base{position:absolute;bottom:14px;left:20px;right:20px;height:150px;border-radius:16px;background:linear-gradient(160deg,#1d2447,#0f142b);border:1px solid #2e3768;transform:rotateX(58deg);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.float-demo .img{position:absolute;left:50%;top:40px;transform:translateX(-50%);font-size:76px;filter:drop-shadow(0 0 22px rgba(120,140,255,.75));animation:hover 4s ease-in-out infinite}
+.float-demo .glow{position:absolute;left:50%;bottom:44px;width:120px;height:26px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(110,130,255,.55),transparent);animation:glow 4s ease-in-out infinite}
+.float-demo .cap{position:absolute;bottom:-14px;width:100%;text-align:center;font-size:11.5px;color:#8792bd}
+@keyframes hover{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-14px)}}
+@keyframes glow{0%,100%{opacity:.9;width:120px}50%{opacity:.5;width:90px}}
+/* ---------- components ---------- */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow)}
+.card h4{margin-top:0}
+.card.dark{background:var(--bg2);color:#dfe4f5;border-color:#232c4d}
+.card.dark h4{color:#fff}
+.card.accent{border-top:4px solid var(--accent)}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.kpi .v{font-size:26px;font-weight:800;letter-spacing:-.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2}
+.kpi .l{font-size:13px;color:var(--ink2);margin-top:2px}
+.kpi .s{font-size:11.5px;color:var(--mute);margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13.6px;background:#fff;border-radius:12px;overflow:hidden}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#eef1fa;color:#2c3555;font-weight:650;font-size:13px;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl{border:1px solid var(--line);border-radius:12px;overflow:auto;box-shadow:var(--shadow);margin:8px 0 14px}
+.pill{display:inline-block;font-size:11.5px;padding:1px 9px;border-radius:999px;background:#eef0ff;color:#4b4bd6;margin:1px 3px 1px 0;white-space:nowrap}
+.pill.c{background:#e3f8fb;color:#0b8a99}.pill.h{background:#ffe8ef;color:#c8325f}.pill.g{background:#e6f6ee;color:#127a50}.pill.o{background:#fff2e2;color:#b06210}.pill.gray{background:#eef0f4;color:#596079}
+.ev{font-size:11.5px;color:#596079;background:#f0f2f8;border-radius:6px;padding:0 6px;margin-left:3px;white-space:nowrap}
+.ev.d{background:#e9f0ff;color:#3747b8}.ev.a{background:#fff3e0;color:#a35a00}.ev.c{background:#ffeaea;color:#b33}
+ul.clean{margin:6px 0 10px;padding-left:20px} ul.clean li{margin:3px 0}
+.callout{border-left:4px solid var(--accent);background:#f1f2ff;padding:12px 16px;border-radius:0 10px 10px 0;margin:12px 0}
+.callout.warn{border-color:var(--warn);background:#fff6ea}
+.callout.ok{border-color:var(--ok);background:#ebf8f1}
+.callout.hot{border-color:var(--hot);background:#fff0f4}
+.muted{color:var(--mute);font-size:12.5px}
+.small{font-size:13px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.flow .st{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:13px;box-shadow:var(--shadow)}
+.flow .ar{color:#9aa3c0}
+.house{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.house .roof{background:var(--grad);color:#fff;text-align:center;padding:16px;font-weight:700;font-size:17px}
+.house .roof small{display:block;font-weight:400;opacity:.9;font-size:13px}
+.house .pillars{display:grid;grid-template-columns:repeat(3,1fr)}
+.house .pillars div{padding:14px 16px;border-right:1px solid var(--line)} .house .pillars div:last-child{border-right:none}
+.house .base{background:#eef1fa;padding:12px 16px;font-size:13.5px;border-top:1px solid var(--line)}
+.bar{height:10px;border-radius:5px;background:#eef0f6;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--grad)}
+.chart{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
+.chart .ct{font-weight:650;font-size:14px;margin-bottom:2px}
+.chart .cs{font-size:12px;color:var(--mute);margin-bottom:6px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+/* ---------- budget console ---------- */
+.console{background:var(--bg2);color:#dfe4f5;border-radius:18px;padding:22px 24px;border:1px solid #27305a;box-shadow:0 14px 40px rgba(11,15,26,.25)}
+.console h4{color:#fff;margin:0 0 8px}
+.console .total-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.console input[type=number]{background:#0b0f1f;color:#fff;border:1px solid #39437a;border-radius:10px;padding:9px 12px;font-size:22px;font-weight:800;width:180px}
+.console input[type=range]{accent-color:#7c7cff}
+.console .presets button,.btn{background:#1d2547;color:#cfd5ff;border:1px solid #39437a;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:13px}
+.console .presets button:hover,.btn:hover{background:#2a3466;color:#fff}
+.btn.light{background:#fff;color:var(--accent);border-color:#d7dbf5}
+.alloc{display:grid;grid-template-columns:200px 1fr 70px 110px;gap:8px 14px;align-items:center;margin-top:14px;font-size:13.5px}
+.alloc .nm{color:#fff}
+.alloc .nm small{display:block;color:#8d97c2;font-size:11.5px}
+.alloc .pc{text-align:right;color:#aab3e0;font-variant-numeric:tabular-nums}
+.alloc .am{text-align:right;font-weight:700;color:#fff;font-variant-numeric:tabular-nums}
+.alloc input[type=range]{width:100%}
+.sumline{margin-top:12px;font-size:13px;color:#aab3e0}
+.sumline b{color:#fff}
+.sumline .bad{color:#ff8a8a}
+.assume{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin-top:10px}
+.assume label{font-size:12px;color:#aab3e0;display:block}
+.assume input{width:100%;background:#0b0f1f;color:#fff;border:1px solid #39437a;border-radius:8px;padding:6px 8px;font-size:14px}
+.m{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
+.console .m{color:#9fb0ff}
+.kv{font-weight:700;color:#0b8a99;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sticky-total{position:sticky;top:0;z-index:15;background:rgba(245,247,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.sticky-total .wrap{display:flex;gap:18px;align-items:center;padding-top:8px;padding-bottom:8px;font-size:13px;color:var(--ink2);flex-wrap:wrap}
+.sticky-total input{width:120px;padding:4px 8px;border:1px solid #cdd3ea;border-radius:8px;font-weight:700;font-size:14px}
+.src-table td{font-size:12.6px}
+.src-table td:first-child{white-space:nowrap;font-weight:650}
+.foot{padding:40px 0 70px;color:var(--mute);font-size:12.5px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0}
+details summary{cursor:pointer;font-weight:650}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.float-demo{display:none}}
+@media (max-width:860px){.side{display:none}main{margin-left:0}.g2,.g3,.g4{grid-template-columns:1fr}.wrap{padding:0 16px}.alloc{grid-template-columns:1fr 60px 90px}.alloc input[type=range]{grid-column:1/-1}.assume{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:30px}.house .pillars{grid-template-columns:1fr}}
+@media print{.side,.sticky-total{display:none}main{margin-left:0}.console{break-inside:avoid}}
+</style>
+</head>
+<body>
+<nav class="side" id="side">
+  <div class="logo"><span>FLOATORY</span></div>
+  <div class="sub">浮空成像 IP 文创周边 · 出海营销计划 2027</div>
+  <a href="#summary">执行摘要</a>
+  <div class="grp">战略 STRATEGY</div>
+  <a href="#m1">① 目标与市场规模</a>
+  <a href="#m2">② 5C 分析与 SWOT</a>
+  <a href="#m3">③ STP 与定位</a>
+  <div class="grp">战术 TACTICS</div>
+  <a href="#m4">④ 7T 营销组合</a>
+  <a href="#m5">⑤ 顾客旅程与种子用户</a>
+  <a href="#m6">⑥ 进入方式·本地化·合规</a>
+  <div class="grp">执行 EXECUTION</div>
+  <a href="#m7">⑦ 执行：日历·组织·预算</a>
+  <a href="#budget">　└ 年度预算（可调整）</a>
+  <div class="grp">控制 CONTROL</div>
+  <a href="#m8">⑧ 测量与控制</a>
+  <a href="#m9">⑨ 测试与迭代</a>
+  <a href="#gstic">G-STIC 一页纸</a>
+  <div class="grp">附录</div>
+  <a href="#appx">数据来源·缺口·方法</a>
+  <div class="mini-budget">年度营销预算<b class="m" data-x="total"></b><span style="color:#8d97c2">修改请到 ⑦ 预算控制台</span></div>
+</nav>
+
+<main>
+<div class="sticky-total"><div class="wrap">
+  <span>📊 年度总预算（USD）：</span><input type="number" id="totalTop" min="1000" step="500" value="10000">
+  <span>付费广告 <b class="m" data-x="ads"></b></span>
+  <span>达人种草 <b class="m" data-x="creator"></b></span>
+  <span>预计付费种子用户 <b class="kv" data-kpi="customers"></b></span>
+  <span>预计 B 端试点 <b class="kv" data-kpi="pilots"></b></span>
+  <a href="#budget" style="margin-left:auto">打开预算控制台 →</a>
+</div></div>
+
+<header class="hero">
+  <div class="wrap" style="position:relative">
+    <div class="tag">MARKETING PLAN · 2027 · CONFIDENTIAL DRAFT v1.0</div>
+    <h1>让 IP <span class="g">浮在空中</span>：<br>微纳无源浮空成像文创周边的出海品牌营销计划</h1>
+    <p class="lead">市场：北美、欧洲、中东、东南亚。核心产品是浮空冰箱贴、浮空卡牌和浮空贴纸，打法是“种子用户 + B 端试点”双引擎。本计划按 9 模块闭环框架编写（G-STIC：目标 → 战略 → 战术 → 执行 → 控制），所有金额随年度预算联动。</p>
+    <div class="meta">
+      <span>🏢 浙江徕智家未来科技有限公司</span>
+      <span>👤 编制：CMO 办公室</span>
+      <span>📅 2026-11-20（计划期 2026-12 至 2027-12）</span>
+      <span>🔎 数据：crawler 高级查询，抓取 2026-11-20</span>
+    </div>
+    <div class="float-demo" aria-hidden="true"><div class="glow"></div><div class="img">🐉</div><div class="base"></div><div class="cap">示意：无源浮空实像——无需电源、无需眼镜</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ================= 执行摘要 ================= -->
+<section class="sec" id="summary">
+  <div class="sec-h"><span class="no">EXECUTIVE SUMMARY</span><h2>执行摘要</h2></div>
+  <p class="sec-lead">以 <b class="m" data-x="total"></b> 的年度营销预算，用 12 个月完成海外“技术 → 品牌”的第一步：验证浮空效果能否在短视频里带来购买，积累第一批付费种子用户，拿下 B 端付费试点；然后用这些数据去谈正式 IP 授权，争取下一轮预算。</p>
+
+  <div class="grid g4">
+    <div class="kpi"><div class="v" data-kpi="customers"></div><div class="l">付费种子用户（Founding Collectors）</div><div class="s">由预算模型推算（假设参数可在 ⑦ 调整）</div></div>
+    <div class="kpi"><div class="v" data-kpi="community"></div><div class="l">私域社群（Discord + 邮件订阅）</div><div class="s">首方数据资产</div></div>
+    <div class="kpi"><div class="v" data-kpi="pilots"></div><div class="l">B 端付费试点（博物馆 / IP 方 / 企业礼品）</div><div class="s">样品包 <span data-kpi="b2bkits"></span> 套 × 转化率</div></div>
+    <div class="kpi"><div class="v" data-kpi="revenue"></div><div class="l">首年预计收入（C 端 + B 端）</div><div class="s">MER <span data-kpi="mer"></span>（收入 ÷ 营销费用）</div></div>
+  </div>
+
+  <h3>一句话战略</h3>
+  <div class="callout"><b>品牌定位：</b>FLOATORY 是“会浮起来的正版收藏”。专利微纳光学（最小图形 30nm、对位误差 1μm）让图案脱离载体，悬浮成清晰的裸眼实像，不需要电源，也不用转角度。光栅贴要转动才有变化，烫金镭射只有平面彩虹，3D 泡棉要靠体积。我们的图案是真的“浮”在空中，而且极难仿制，是一张自带防伪的周边。</div>
+
+  <div class="grid g3">
+    <div class="card accent"><h4>🎯 为什么现在</h4>
+      <ul class="clean small">
+        <li>全球授权商品零售额 2025 年 <b>3,898 亿美元</b>，同比 +5.45%，跑赢整体零售（+4.52%）<span class="ev d">A-S142</span></li>
+        <li>北美动漫周边：2025 年 9.2 亿美元，2026–2033 年复合增速 <b>17.1%</b> <span class="ev d">A-S11</span></li>
+        <li>美国玩具销售 +20%，主要由收藏品和粉丝消费拉动（Circana，2026-11）<span class="ev d">A-S30</span></li>
+        <li>美国 Google 趋势里 “sticker” 指数 2024→2026 从 43 升到 62；“fridge magnet” 指数基数小，但涨了约 9 倍 <span class="ev d">A-S26</span></li>
+      </ul></div>
+    <div class="card accent"><h4>⚔️ 我们的切入口</h4>
+      <ul class="clean small">
+        <li>正版 3D 泡棉冰箱贴中位价 <b>$10.99</b>，同质化严重 <span class="ev d">A-S136</span></li>
+        <li>光栅贴多为粉丝自制、未授权，中位价 $7.99 <span class="ev d">A-S136</span></li>
+        <li>日本 3D 泡泡贴爆红，盗版占海关查扣案件的 <b>40%</b>，主要从中国寄出 <span class="ev d">A-S146</span>：粉丝要“正版又买得起”，<b>防伪本身就是卖点</b></li>
+        <li>Reddit 上官方光栅卡获 1,443 赞：“SO beautiful” <span class="ev d">X-S1</span></li>
+      </ul></div>
+    <div class="card accent"><h4>🧭 怎么打（<span class="m" data-x="total"></span>）</h4>
+      <ul class="clean small">
+        <li><b>先美后欧，东南亚试价，中东走 B 端</b>：美国做主战场，英国作为欧洲桥头堡，菲律宾做价格测试，阿联酋先做 B 端试点</li>
+        <li><b>先不付 IP 保底</b>：首年用原创 IP、公版名画、独立画师 / VTuber 联名（分成制），用销售数据去谈授权</li>
+        <li><b>内容优先</b>：浮空效果天然适合短视频，达人种草 <span class="m" data-x="creator"></span>，付费放大 <span class="m" data-x="ads"></span></li>
+        <li><b>B 端回血</b>：向博物馆商店、景区、IP 授权代理、企业礼品寄送 <span class="kv" data-kpi="b2bkits"></span> 套样品包</li>
+      </ul></div>
+  </div>
+
+  <h3>年度路线图</h3>
+  <div class="flow">
+    <div class="st"><b>P0 准备</b><br><span class="muted">2026-12 → 2027-02</span><br>品牌·商标·3 款主力品·内容</div><span class="ar">➜</span>
+    <div class="st"><b>P1 软启动</b><br><span class="muted">2027-03 → 05</span><br>美国 + 菲律宾测试·100 位创始藏家</div><span class="ar">➜</span>
+    <div class="st"><b>P2 正式发布</b><br><span class="muted">2027-06 → 08</span><br>Anime Expo / SDCC 档期·英国上线</div><span class="ar">➜</span>
+    <div class="st"><b>P3 旺季</b><br><span class="muted">2027-09 → 12</span><br>返校·BLE 授权展·黑五·圣诞·12.12</div><span class="ar">➜</span>
+    <div class="st"><b>复盘 ↺</b><br><span class="muted">2027-12</span><br>回写目标、STP、7T → 2028</div>
+  </div>
+  <p class="muted">证据标注：<span class="ev d">A-S4</span> 表示附录来源编号（A=北美/欧洲抓取批次，B=中东/东南亚批次，X=补充抓取，I=公司内部资料）；<span class="ev a">假设</span> 表示待验证的假设；<span class="ev c">冲突</span> 表示数据口径冲突。</p>
+</section>
+
+<!-- ================= ① 目标与市场规模 ================= -->
+<section class="sec" id="m1">
+  <div class="sec-h"><span class="no">① GOAL</span><h2>目标与市场规模</h2></div>
+  <p class="sec-lead">先估算市场规模（TAM / SAM / SOM），再定 SMART 目标和单客经济。首年 SOM 不靠市场份额推算，而是由预算、产能和渠道反推出来。</p>
+
+  <h3>市场规模估算（多口径、交叉验证）</h3>
+  <div class="tbl"><table>
+    <tr><th>层级</th><th>口径</th><th class="num">规模</th><th>增速</th><th>来源 / 说明</th></tr>
+    <tr><td><b>TAM-1</b> 授权商品</td><td>全球授权商品与服务零售额</td><td class="num">$389.8B（2025）</td><td>+5.45%</td><td>Licensing International 2026 年度调查 <span class="ev d">A-S142</span>；2024 年为 $369.6B <span class="ev d">A-S4</span>。其中娱乐 / 角色类 $149.8B，动漫、游戏、社媒 IP 占 33%</td></tr>
+    <tr><td><b>TAM-2</b> 动漫周边</td><td>全球动漫周边</td><td class="num">$12.0B（2025）</td><td>CAGR 8.8%（2026–33）</td><td>Grand View <span class="ev d">A-S50</span>；另一家估 $32.4B <span class="ev c">冲突</span>，口径更宽（含服饰、游戏）<span class="ev d">A-S9</span>，本计划用保守值</td></tr>
+    <tr><td><b>TAM-3</b> 冰箱贴</td><td>全球冰箱贴</td><td class="num">$0.9–2.85B（2025）</td><td>CAGR 4.4–7.05%</td><td>三家机构差异很大 <span class="ev c">冲突</span> <span class="ev d">A-S18</span><span class="ev d">A-S21</span><span class="ev d">A-S22</span>；共同点：纪念品类占比最大（42%），亚太最大</td></tr>
+    <tr><td><b>SAM</b> 可服务</td><td>北美动漫周边 + GCC 流行文化周边 + 东南亚潮玩</td><td class="num">≈ $2.1B+</td><td>北美 +17.1%；GCC +16.75%</td><td>北美动漫周边 $922M <span class="ev d">A-S11</span>（美国 $555M，线上占 56.9% <span class="ev d">A-S15</span>）；GCC 流行文化周边 $1.2B <span class="ev d">B-S12</span>；东南亚：泡泡玛特 2024 年东南亚收入 24 亿元人民币，+619% <span class="ev d">B-S1</span></td></tr>
+    <tr><td><b>SOM</b> 首年可获得</td><td>由预算、产能、渠道推算</td><td class="num"><span data-kpi="revenue"></span></td><td>—</td><td>由 ⑦ 预算模型推算（C 端订单 × 客单价 + B 端试点）；占 SAM 不到 0.01%，所以首年的目标是<b>验证模式</b>，不追份额</td></tr>
+  </table></div>
+  <div class="grid g2">
+    <div class="card"><h4>📦 供给侧旁证：美国非金属永磁体进口（HS 850519，含橡胶 / 铁氧体冰箱贴磁材）</h4>
+      <div id="chartTrade"></div>
+      <p class="small">美国这类磁材的进口额稳定在每年约 1.2 亿美元，<b>中国占比从 47.6% 降到 40.7%</b>（2024 → 2026 年 1–9 月）。关税和小额豁免取消在推动采购离开中国 <span class="ev d">A-S25</span><span class="ev d">B-S60</span>。启示：卖点不能只靠价格，要靠技术和品牌；物流要改成<b>大货进口 + 美国海外仓</b>。</p></div>
+    <div class="card"><h4>🔥 热度信号与风险信号</h4>
+      <ul class="clean small">
+        <li><b>正面：</b>Crunchyroll 调研显示 13–54 岁娱乐消费者中 44% 自认动漫粉，青少年达 59%；54% 的 Z 世代动漫观众会买周边或参加漫展 <span class="ev d">A-S46</span></li>
+        <li><b>正面：</b>每年看几次动漫以上的观众里，28% 在动漫周边上花过 $200 以上，10% 超过 $500 <span class="ev d">A-S48</span></li>
+        <li><b>风险：</b>泡泡玛特美国销售额 2026 年同比 −45% <span class="ev d">A-S64</span>；“labubu” 搜索指数在泰国从 17.5 跌到 2.1，在阿联酋从 24.7 跌到 2.2 <span class="ev d">B-S35</span><span class="ev d">B-S17</span>，单一 IP 爆款衰退很快</li>
+        <li><b>风险：</b>迪拜 2026 年 1–8 月国际游客同比 −44.4%（地区局势）<span class="ev d">B-S78</span>，8 月起回升；纪念品渠道要分阶段投入</li>
+      </ul></div>
+  </div>
+
+  <h3>目标体系（SMART）</h3>
+  <div class="tbl"><table>
+    <tr><th>层级</th><th>指标</th><th>基准</th><th class="num">2027 目标（随预算联动）</th><th>截止</th></tr>
+    <tr><td rowspan="2">财务</td><td>首年收入（C + B）</td><td>0（新品牌）</td><td class="num"><span class="kv" data-kpi="revenue"></span></td><td>2027-12-31</td></tr>
+    <tr><td>C 端单位贡献毛利率（扣货品、履约、支付、平台费）</td><td>—</td><td class="num">≥ 55%</td><td>持续</td></tr>
+    <tr><td rowspan="4">营销（C 端）</td><td>付费种子用户（去重）</td><td>0</td><td class="num"><span class="kv" data-kpi="customers"></span></td><td>2027-12-31</td></tr>
+    <tr><td>私域社群（Discord + 邮件）</td><td>0</td><td class="num"><span class="kv" data-kpi="community"></span></td><td>2027-12-31</td></tr>
+    <tr><td>混合获客成本（全成本口径）</td><td>行业 TikTok 电商 CPA $17 <span class="ev d">A-S121</span></td><td class="num">≤ $20（P1 门槛 $25）</td><td>2027-06-30 验收</td></tr>
+    <tr><td>复购率（90 天）</td><td>—</td><td class="num">≥ 20%</td><td>2027-12-31</td></tr>
+    <tr><td rowspan="3">营销（B 端）</td><td>B 端样品包寄出</td><td>0</td><td class="num"><span class="kv" data-kpi="b2bkits"></span> 套</td><td>2027-09-30</td></tr>
+    <tr><td>付费试点订单</td><td>0</td><td class="num"><span class="kv" data-kpi="pilots"></span> 单</td><td>2027-12-31</td></tr>
+    <tr><td>正式 IP 授权意向（LOI）</td><td>0</td><td class="num">≥ 1 份</td><td>BLE 2027 之后（2027-11）</td></tr>
+    <tr><td rowspan="3">沟通</td><td>达人合作内容（UGC）</td><td>0</td><td class="num"><span class="kv" data-kpi="ugc"></span> 条</td><td>2027-12-31</td></tr>
+    <tr><td>内容总曝光（付费 + 达人）</td><td>0</td><td class="num"><span class="kv" data-kpi="reach"></span></td><td>2027-12-31</td></tr>
+    <tr><td>3 秒完播率 / 钩子点击率</td><td>TikTok 电商中位 CTR 0.61% <span class="ev d">A-S122</span></td><td class="num">CTR ≥ 1.0%</td><td>P1 结束</td></tr>
+  </table></div>
+
+  <h3>单客经济（C 端，美国主力品口径）<span class="ev a">假设</span></h3>
+  <div class="grid g2">
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>项目</th><th class="num">每单（美元）</th><th>说明</th></tr>
+      <tr><td>客单价（AOV）</td><td class="num"><span data-kpi="aov"></span></td><td>冰箱贴 $12.90 × 约 2 件（3 件装 $32）</td></tr>
+      <tr><td>到岸货品成本</td><td class="num">−3.20</td><td>膜片 + 磁底 + 包装约 $1.0/件，加海运、关税、头程约 $0.6/件【待公司核实】</td></tr>
+      <tr><td>履约（美国海外仓 + 尾程）</td><td class="num">−5.00</td><td>平信 / 轻小件，偏远地区更高</td></tr>
+      <tr><td>支付与平台费</td><td class="num">−1.30</td><td>Shopify 约 3%；TikTok Shop 美国佣金 6% <span class="ev d">B-S60</span></td></tr>
+      <tr><td><b>单位贡献毛利（营销前）</b></td><td class="num"><b data-kpi="cm"></b></td><td>贡献毛利率 <span data-kpi="cmr"></span></td></tr>
+      <tr><td>LTV（12 个月，1.5 单）</td><td class="num"><b data-kpi="ltv"></b></td><td>按贡献毛利计</td></tr>
+      <tr><td>可承受 CAC（LTV / CAC ≥ 1.5）</td><td class="num"><b data-kpi="maxcac"></b></td><td>首单回本线 = 单位贡献毛利</td></tr>
+    </table></div>
+    <div class="card"><h4>B 端客户价值与盈亏平衡</h4>
+      <ul class="clean small">
+        <li><b>B 端试点客单</b>：<span data-kpi="b2bavg"></span>/单（例：起订 3,000 片 × $1.0–1.5，定制浮空图案；博物馆、景区、企业礼品、IP 方正版防伪贴）<span class="ev a">假设</span></li>
+        <li><b>B 端毛利</b>：按 45% 估算，客户生命周期 2 年、年复购 2 次 → 单客价值 ≈ 试点客单 × 4 × 45%</li>
+        <li><b>获客成本</b>：样品包 $25/套（含国际快递）+ 销售工时；按 20% 转化率，每个试点的获客成本 ≈ $125 + 工时</li>
+        <li><b>营销盈亏平衡</b>：全年营销费 <span class="m" data-x="total"></span> ÷ 混合贡献毛利率约 50% ≈ 需要 <span class="kv" data-kpi="bep"></span> 收入才能覆盖营销投入</li>
+      </ul>
+      <div class="callout warn small">预算框架：先按“目标任务法”自下而上测算（⑦ 预算控制台），再用公司可承受的上限 <span class="m" data-x="total"></span> 自上而下校验。两者有差距时：<b>首年只追验证型目标</b>，收入目标在 2027 年 Q2 复盘后再上调。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ② 5C ================= -->
+<section class="sec" id="m2">
+  <div class="sec-h"><span class="no">② 5C</span><h2>5C 分析：环境、行业、顾客、竞争、公司、合作者 → SWOT</h2></div>
+  <p class="sec-lead">外部机会与威胁（O / T）来自环境、行业、顾客、竞争分析；内部优势与劣势（S / W）来自公司与合作者分析，最后汇总成 TOWS 对策，作为 STP 和 7T 的输入。</p>
+
+  <h3>宏观环境（PEST 摘要）</h3>
+  <div class="grid g4">
+    <div class="card"><h4>🏛 政策 / 法规</h4><p class="small">美国 2025-08-29 起取消 $800 小额包裹免税（EO 14324）<span class="ev d">B-S60</span>；美国 CPSC 16 CFR 1262 磁铁安全标准 <span class="ev d">A-S153</span>；欧盟 GPSR 要求指定欧盟责任人，2025 年 Safety Gate 预警创纪录（4,671 条），执法同比 +35% <span class="ev d">A-S87</span>；阿联酋 ECAS / EQM 认证 <span class="ev d">B-S42</span>。</p></div>
+    <div class="card"><h4>💹 经济</h4><p class="small">关税让中国直发小包成本上升；TikTok Shop 东南亚卖家综合抽佣 14–21%（泰国 17.84–20.52%，菲律宾 14.03–16.98%）<span class="ev d">B-S55</span>；迪拜旅游 2026 年受地区局势冲击 <span class="ev d">B-S78</span>。</p></div>
+    <div class="card"><h4>👥 社会 / 文化</h4><p class="small">动漫已进入主流，青少年粉丝占 59% <span class="ev d">A-S46</span>；“冰箱贴收藏”是 TikTok 上的旅行记忆型内容，单条最高 40 万赞 <span class="ev d">A-S54</span>；菲律宾 IP 联名零售（名创优品 × 火影 / 海贼王）热度高 <span class="ev d">B-S80</span>。</p></div>
+    <div class="card"><h4>🔬 技术</h4><p class="small">微纳无源浮空成像：纳米压印最小图形 30nm、大面积对位误差 1μm、按需定制悬浮景深 <span class="ev">I-1</span>；竞品技术多为光栅、烫金镭射、3D 泡棉 / 树脂、音乐芯片（个性化音乐冰箱贴）<span class="ev d">A-S72</span>。</p></div>
+  </div>
+
+  <h3>行业趋势与搜索信号</h3>
+  <div class="grid g2">
+    <div class="chart"><div class="ct">各市场 “sticker / Aufkleber / สติ๊กเกอร์” 搜索指数（年均）</div><div class="cs">Google Trends，同组内相对值，0–100；2026 年数据截至 11 月 <span class="ev d">A-S26</span><span class="ev d">A-S70</span><span class="ev d">B-S29</span></div><div id="chartSticker"></div></div>
+    <div class="chart"><div class="ct">单一 IP 爆款的生命周期：“labubu” 搜索指数</div><div class="cs">Google Trends 年均值；2025 年见顶后快速回落 <span class="ev d">B-S35</span><span class="ev d">B-S17</span><span class="ev d">B-S29</span></div><div id="chartLabubu"></div></div>
+  </div>
+  <div class="grid g3" style="margin-top:14px">
+    <div class="card"><h4>季节性</h4><p class="small">收藏品搜索在 8、9 月分别高出均值 27% 和 22%，12 月第二波 <span class="ev d">A-S51</span>；美国 “sticker” 指数 2 月、5 月是高点（情人节、毕业季）<span class="ev d">A-S26</span>；菲律宾 2 月和 9–12 月（超长圣诞季）<span class="ev d">B-S29</span>；德国 3–8 月高 <span class="ev d">A-S74</span>。</p></div>
+    <div class="card"><h4>相关搜索（需求词）</h4><p class="small">美 / 英 / 阿联酋的相关搜索都以 <b>custom / photo / music fridge magnet、souvenir</b> 为主 <span class="ev d">A-S26</span><span class="ev d">B-S17</span>；菲律宾为 <b>ref magnet design、birthday souvenir</b> <span class="ev d">B-S29</span>；德国为 <b>Kühlschrankmagnet mit Musik / selbst gestalten</b> <span class="ev d">A-S74</span>。说明“个性化 + 科技感”的冰箱贴已有教育好的需求。</p></div>
+    <div class="card"><h4>渠道结构</h4><p class="small">美国动漫周边线上占 56.9% <span class="ev d">A-S15</span>；Shopping 结果里的卖家集中在 Target、Walmart、Etsy、eBay <span class="ev d">A-S136</span>；阿联酋集中在 noon、Carrefour、Kinokuniya、Virgin <span class="ev d">B-S62</span>；菲律宾集中在 Shopee、Lazada <span class="ev d">B-S64</span>。</p></div>
+  </div>
+
+  <h3>顾客分析（C 端）：动机、感知与决策</h3>
+  <div class="grid g3">
+    <div class="card"><h4>文化 / 社会 / 个人因素</h4><ul class="clean small">
+      <li><b>粉丝身份表达</b>：约 40% 的青少年动漫粉认为动漫是自己身份中“有意义”的一部分 <span class="ev d">A-S46</span></li>
+      <li><b>“推活”消费</b>：约 95% 的粉丝会买喜欢作品的周边 <span class="ev d">B-S22</span></li>
+      <li><b>旅行记忆</b>：冰箱贴收藏 = “每到一地带一枚”，送给家人（“never forget a fridge magnet for my nana”）<span class="ev d">B-S19</span></li></ul></div>
+    <div class="card"><h4>动机与顾虑（来自社区）</h4><ul class="clean small">
+      <li><b>想要正版，但官方贵</b>：“official merch can be really expensive, especially when buying multiple” <span class="ev d">A-S99</span></li>
+      <li><b>怕买到盗版</b>：Reddit 上大量“是正版还是盗版”的求鉴定帖 <span class="ev d">A-S99</span>；ANN 提醒“价格过低就要警惕” <span class="ev d">A-S149</span></li>
+      <li><b>怕质量差</b>：竞品广告直击痛点：“Sick of cheap anime merch that fades fast” <span class="ev d">A-S73</span></li></ul></div>
+    <div class="card"><h4>购买决策路径</h4><ul class="clean small">
+      <li><b>问题识别</b>：刷到开箱 / 收藏墙视频 → <b>信息搜索</b>：TikTok、Reddit、Google Shopping → <b>方案评估</b>：正版与否、效果、价格 → <b>购买</b>：TikTok Shop、官网、漫展 → <b>购后</b>：晒冰箱、晒收藏</li>
+      <li><b>低介入、冲动型</b>：单价 $5–15，启发式决策（“哇，浮起来了”）为主；<b>收藏型</b>：限量、编号、隐藏款驱动复购</li></ul></div>
+  </div>
+
+  <h3>顾客分析（B 端）：组织购买行为</h3>
+  <div class="tbl"><table>
+    <tr><th>B 端类型</th><th>购买中心（关键角色）</th><th>购买类型</th><th>关注点 / 风险顾虑</th><th>信息来源</th></tr>
+    <tr><td><b>博物馆 / 景区 / 免税店</b>（例：British Museum Shop、MoS Boston、Dubai Duty Free 的冰箱贴品类）<span class="ev d">A-S60</span><span class="ev d">B-S33</span></td><td>商品采购（决策）、零售经理（使用）、品牌 / 授权（把关）</td><td>修正重购（替换现有纪念品冰箱贴）</td><td>独特性、售价与毛利（零售倍率 2.5–3 倍）、起订量、交期</td><td>展会、供应商推荐、样品</td></tr>
+    <tr><td><b>IP 方 / 授权代理</b>（例：Crunchyroll、Bulldog Licensing 都在 BLE 2026 参展 <span class="ev d">A-S156</span>）</td><td>授权经理（发起）、品牌保护（影响）、法务（把关）</td><td>新购（新品类被授权方）</td><td>品类创新、防伪能力、被授权方资质、保底金</td><td>Licensing Expo、BLE、LinkedIn</td></tr>
+    <tr><td><b>企业礼品 / 品牌营销</b>（例：工行红包浮空“福”字 <span class="ev">I-2</span>）</td><td>市场部（发起）、采购（决策）、品牌（影响）</td><td>新购 / 直接重购（节庆）</td><td>品牌露出、科技感、交期、单价</td><td>代理商、促销品展、LinkedIn</td></tr>
+    <tr><td><b>独立创作者 / VTuber / 画师</b>（Makeship 模式 <span class="ev d">A-S73</span>）</td><td>创作者本人 + 经纪公司</td><td>新购（联名众筹）</td><td>分成比例、零库存风险、粉丝口碑</td><td>X / Discord、创作者社群</td></tr>
+  </table></div>
+
+  <h3>竞争分析</h3>
+  <div class="tbl"><table>
+    <tr><th>竞品 / 替代品</th><th>技术 / 形态</th><th class="num">价格带（中位）</th><th>渠道与打法</th><th>我们的差异点</th></tr>
+    <tr><td><b>正版 3D 泡棉冰箱贴</b>（Monogram 等，Crunchyroll 授权）</td><td>3D 泡棉浮雕</td><td class="num">$10.99（IQR $7.5–11.99）</td><td>Target / Walmart / Hot Topic 货架 <span class="ev d">A-S136</span></td><td>浮空实像、更薄更轻、可做卡牌 / 贴纸；自带防伪</td></tr>
+    <tr><td><b>光栅冰箱贴</b>（Native Northwest、Deluxebase 3D LiveLife、LINE FRIENDS BT21）</td><td>光栅（翻转 / 视差）</td><td class="num">$5.90（IQR $4.99–6.57）</td><td>纪念品店、博物馆店、Walmart <span class="ev d">A-S56</span></td><td>不用转角度、没有条纹；景深可定制</td></tr>
+    <tr><td><b>粉丝自制光栅贴</b>（Etsy / eBay / Depop）</td><td>光栅，多为未授权</td><td class="num">$7.99（IQR $6–9.99）</td><td>Etsy、eBay、Whatnot 直播 <span class="ev d">A-S136</span></td><td>正版 / 原创 + 防伪（盗版难仿）</td></tr>
+    <tr><td><b>个性化音乐冰箱贴</b>（Soufeel、Pawfect House）</td><td>亚克力 + 扫码 / 芯片放歌</td><td class="num">≈ €17.95</td><td>Meta 视频广告、送礼场景（母亲节、情侣、父亲）<span class="ev d">A-S72</span></td><td>不靠手机也有“魔法感”；后续可加 NFC</td></tr>
+    <tr><td><b>3D 泡泡贴</b>（Q-Lia Bonbon Drop，日本）</td><td>透明滴胶圆顶</td><td class="num">¥500 / 张（约 $3.2）</td><td>日本零售爆款，盗版泛滥 <span class="ev d">A-S146</span></td><td>同样有“立体收藏”的乐趣，但更难仿</td></tr>
+    <tr><td><b>泡泡玛特等潮玩</b></td><td>盲盒手办</td><td class="num">$15–30</td><td>直营店 + 主题乐园；2025 年海外收入 +291.9% <span class="ev d">B-S8</span></td><td>价格更低、可贴可收藏；盲盒卡牌机制可借鉴</td></tr>
+    <tr><td><b>东南亚低价冰箱贴</b>（Shopee / Lazada）</td><td>印刷软磁，多为未授权</td><td class="num">₱12–25（约 $0.2–0.4）</td><td>平台低价 <span class="ev d">B-S64</span></td><td>不打价格战：主打“高级感 / 正版 / 送礼”</td></tr>
+  </table></div>
+  <div class="grid g2">
+    <div class="chart"><div class="ct">各细分品类价格带（美元，P25–中位–P75）</div><div class="cs">Google Shopping 每组 40 个商品；汇率按 1 GBP≈1.30、1 EUR≈1.15、1 USD≈3.6725 AED、1 USD≈58 PHP 估算 <span class="ev a">假设</span></div><div id="chartPrice"></div></div>
+    <div class="card"><h4>广告库观察（Meta 在投广告，2026-11）</h4><ul class="clean small">
+      <li><b>“fridge magnet” 美国</b>：以个性化音乐冰箱贴为主（Soufeel、Pawfect House），视频形式，按节日送礼投放（母亲节、情侣、父亲节）<span class="ev d">A-S72</span></li>
+      <li><b>“anime merch” 美 / 英</b>：动漫潮服 DTC（Anime Ape 请 IShowSpeed 出镜、Zenime 主打“质量好不褪色”）、Makeship（创作者联名，11/26 黑五）、Whatnot 直播电商 <span class="ev d">A-S73</span><span class="ev d">A-S71</span></li>
+      <li><b>菲律宾</b>：ZenMarket 日本代购、InnerAnime、Collector's Hub <span class="ev d">B-S36</span>；<b>阿联酋</b>：“anime” 广告以 App 为主，实体周边品牌投放少 <span class="ev d">B-S45</span> → 广告竞争空档</li>
+      <li><b>空白</b>：<b>没有发现任何“浮空成像”周边品牌在投放</b>，品类心智还空着</li></ul></div>
+  </div>
+
+  <h3>公司与合作者</h3>
+  <div class="grid g2">
+    <div class="card"><h4>🏭 公司能力清单（VRIO）</h4>
+      <div class="tbl" style="box-shadow:none"><table>
+        <tr><th>资源 / 能力</th><th>有价值</th><th>稀缺</th><th>难模仿</th><th>组织可利用</th></tr>
+        <tr><td>微纳无源浮空成像（30nm 纳米压印、1μm 对位、景深定制算法）<span class="ev">I-1</span></td><td>✔</td><td>✔</td><td>✔（8 项发明专利 + 约 30 项实用新型 / 软著）</td><td>✔</td></tr>
+        <tr><td>防伪项目经验（浙江中烟浮雕防伪、吉利极氪标识）<span class="ev">I-1</span></td><td>✔</td><td>✔</td><td>部分</td><td>✔ → B 端背书</td></tr>
+        <tr><td>院士 / 海外人才研发团队</td><td>✔</td><td>✔</td><td>✔</td><td>可用于品牌故事和 PR</td></tr>
+        <tr><td>C 端品牌、内容、海外渠道</td><td colspan="4">✘ 尚无，是本计划要补的能力</td></tr>
+      </table></div>
+      <p class="small"><b>约束：</b>营销预算 <span class="m" data-x="total"></span>；首年没有海外团队；IP 授权需要保底金（单角色 $10,000 级 <span class="ev d">A-S95</span>）；产能、成本、起订量待公司数据核实。</p></div>
+    <div class="card"><h4>🤝 合作者地图</h4><ul class="clean small">
+      <li><b>平台</b>：Shopify（自营官网）、TikTok Shop（美国佣金 6%、英国 9%、东南亚 1–8% <span class="ev d">B-S60</span>）、Etsy（原创 / 艺术家联名）、Amazon（P3 之后）、Shopee / Lazada（东南亚）、noon（中东）</li>
+      <li><b>履约</b>：美国海外仓（大货进口，规避小额包裹限制）、英国海外仓（P2）</li>
+      <li><b>内容</b>：动漫 / 收藏 / 旅行类小达人（nano / micro），TikTok Shop 联盟达人</li>
+      <li><b>IP 来源</b>：公版名画（如葛饰北斋、梵高）、独立画师、VTuber、授权代理（BLE / Licensing Expo）</li>
+      <li><b>合规</b>：欧盟 / 英国责任人服务（约 $500 / 年起 <span class="ev d">A-S86</span>）、第三方检测（SGS / Intertek）</li>
+      <li><b>关系风险</b>：平台依赖（抽佣上涨，东南亚综合费率 20–25% <span class="ev d">B-S55</span>）、授权方议价力强</li></ul></div>
+  </div>
+
+  <h3>SWOT → TOWS 对策</h3>
+  <div class="grid g2">
+    <div class="tbl" style="margin:0"><table>
+      <tr><th style="width:50%">S 优势</th><th>W 劣势</th></tr>
+      <tr><td class="small">S1 全球领先的无源浮空实像技术与专利<br>S2 天然防伪（30nm 级结构难以仿制）<br>S3 超薄、无源、可量产，适配冰箱贴 / 卡牌 / 贴纸 / 包装<br>S4 B 端防伪与车载项目背书</td><td class="small">W1 没有 C 端品牌和海外渠道经验<br>W2 预算小（<span class="m" data-x="total"></span>）<br>W3 没有现成的头部 IP 授权<br>W4 浮空效果在 2D 屏幕上较难拍出来<br>W5 成本和产能数据待核实</td></tr>
+      <tr><th>O 机会</th><th>T 威胁</th></tr>
+      <tr><td class="small">O1 授权与动漫周边持续增长（+5.45% / +17.1%）<br>O2 盗版泛滥，粉丝要“正版又平价”<br>O3 品类心智空白，没人投放“浮空周边”<br>O4 TikTok Shop 东南亚 GMV 2025 年翻倍至约 $456 亿 <span class="ev d">B-S54</span><br>O5 GCC 流行文化周边 CAGR 16.75%</td><td class="small">T1 关税、小额豁免取消<br>T2 爆款 IP 生命周期短（Labubu 回落）<br>T3 平台抽佣上涨<br>T4 欧盟 GPSR 执法趋严<br>T5 中东旅游波动<br>T6 被模仿、低价光栅冲击</td></tr>
+    </table></div>
+    <div class="card"><h4>TOWS 策略（STP 与 7T 的输入）</h4><ul class="clean small">
+      <li><b>SO（增长）</b>：S1 + S2 × O2 → 把 <b>“浮空 = 正版证明”</b> 作为核心卖点，B 端向 IP 方推销“防伪 + 周边”二合一</li>
+      <li><b>SO</b>：S1 × O3 → 抢先占领 “floating magnet / floating sticker” 品类词（SEO、GEO、TikTok 话题标签）</li>
+      <li><b>WO（补短板）</b>：W3 × O1 → 首年用原创 IP、公版名画、创作者分成，积累销售数据后再谈授权</li>
+      <li><b>WO</b>：W4 × O4 → 投入 <span class="m" data-x="content"></span> 做“浮空效果微距视频”模板，让达人复制拍法</li>
+      <li><b>ST（防守）</b>：S3 × T1 → 大货进口 + 美国海外仓；单位成本低，能扛关税</li>
+      <li><b>WT（规避）</b>：W2 × T2 → 不押单一 IP，小批量多款，按数据补货；中东先做 B 端，暂不铺 C 端渠道</li></ul></div>
+  </div>
+</section>
+<!-- ================= ③ STP ================= -->
+<section class="sec" id="m3">
+  <div class="sec-h"><span class="no">③ STP</span><h2>市场细分、目标市场与定位</h2></div>
+  <p class="sec-lead">细分维度：人口、地理、行为、心理。按“目标吸引力（规模、增长、竞争）× 公司匹配度 × 触达成本”给每个细分打分。B 端按“嵌套法 + ICP + 客户分级”处理。</p>
+
+  <h3>C 端细分与评估</h3>
+  <div class="tbl"><table>
+    <tr><th>细分</th><th>画像</th><th>需求 / 动机</th><th>吸引力</th><th>匹配度</th><th>触达成本</th><th>决策</th></tr>
+    <tr><td><b>S1 动漫 / IP 收藏粉</b></td><td>16–30 岁 Z 世代，美、英、菲为主；TikTok、Reddit、Discord 重度用户</td><td>身份表达、收藏、晒；想要正版和新奇</td><td>★★★★★<br><span class="muted">北美 +17.1%</span></td><td>★★★★<br><span class="muted">需要 IP 内容</span></td><td>低（社群集中）</td><td><span class="pill g">主目标</span></td></tr>
+    <tr><td><b>S2 旅行冰箱贴收藏者</b></td><td>25–45 岁，旅行爱好者、家庭；全球分布，迪拜、伦敦、纽约等目的地</td><td>记忆、送礼、收藏墙</td><td>★★★★<br><span class="muted">纪念品占冰箱贴 42%</span></td><td>★★★★★<br><span class="muted">浮空地标很惊艳</span></td><td>中（经 B 端景区触达）</td><td><span class="pill c">次目标（B2B2C）</span></td></tr>
+    <tr><td><b>S3 科技感礼品购买者</b></td><td>25–45 岁，节日送礼（情人节、母亲节、圣诞）</td><td>个性化、有惊喜</td><td>★★★<br><span class="muted">个性化音乐冰箱贴已教育市场</span></td><td>★★<br><span class="muted">小批量定制工艺待验证</span></td><td>高（Meta 竞价）</td><td><span class="pill o">观察，P3 测试</span></td></tr>
+    <tr><td><b>S4 潮玩盲盒玩家</b></td><td>18–35 岁，东南亚为主</td><td>拆盒、隐藏款、交换</td><td>★★★<br><span class="muted">Labubu 回落</span></td><td>★★★<br><span class="muted">浮空卡牌盲包</span></td><td>低（TikTok 联盟）</td><td><span class="pill o">用卡牌 SKU 测试</span></td></tr>
+  </table></div>
+
+  <div class="grid g2">
+    <div class="card"><h4>🎯 主目标画像：“Mika”，22 岁，美国德州，大学生</h4>
+      <ul class="clean small">
+        <li>每周看 3 部番，Discord 里有 4 个粉丝群；宿舍冰箱贴满周边</li>
+        <li>月均周边支出 $30–60；买过 Etsy 上的光栅贴，后来发现是盗版，很失望</li>
+        <li>刷 TikTok 时被“会浮起来的贴纸”吸引，第一反应是“这怎么拍的？是真的吗？”</li>
+        <li>决策点：效果是否真实、是否正版 / 原创、价格是否 ≤ $15、能不能集齐一套</li>
+      </ul></div>
+    <div class="card"><h4>📏 战术目标市场（有效性 × 成本效益）</h4>
+      <ul class="clean small">
+        <li><b>只触达</b>：动漫、游戏、收藏兴趣人群，加上冰箱贴收藏话题（#fridgemagnets #magnetcollection #animemerch）</li>
+        <li><b>排除</b>：只买 ₱15 低价贴的价格敏感人群（东南亚低价带），以及儿童（避免儿童产品合规负担，产品标注 14+）</li>
+        <li><b>社会价值高的客户</b>：收藏墙博主和漫展 cosplayer，他们对其他买家影响最大，列为种子用户优先级 A</li>
+      </ul></div>
+  </div>
+
+  <h3>B 端细分、ICP 与客户分级</h3>
+  <div class="tbl"><table>
+    <tr><th>分级</th><th>ICP 定义</th><th>代表名单（首批）</th><th>经营方式</th><th>价值主张（客户能算出来的）</th></tr>
+    <tr><td><span class="pill h">A 级</span></td><td>年周边采购额 &gt; $100k 的博物馆 / 景区商店、IP 授权方</td><td>大英博物馆商店（英国 SERP 第 7）、Dubai Duty Free、MoS Boston、Crunchyroll 消费品部门</td><td>一对一 ABM：定制样品（用对方 IP 或馆藏做浮空样张）</td><td>新品类贡献增量 + 零售倍率 2.5–3 倍；<b>一贴两用：周边 + 防伪</b>，减少盗版损失</td></tr>
+    <tr><td><span class="pill c">B 级</span></td><td>流行文化零售商、动漫店、企业礼品代理</td><td>Forbidden Planet、Geekay、Little Things（迪拜）、UAE Anime Store、Papemelroti（菲律宾）</td><td>一对少：标准样品包 + 寄售 / 小批量</td><td>差异化 SKU、低起订量（≥ 500 片）、货架价 $9.9–14.9</td></tr>
+    <tr><td><span class="pill gray">C 级</span></td><td>独立画师、VTuber、小型 IP、Etsy 卖家</td><td>Discord / X 上 1 万–10 万粉的创作者</td><td>平台化：分成 / 众筹模式，自动化报价</td><td>零库存、零保底，毛利分成 15–25%</td></tr>
+  </table></div>
+  <p class="small">分级标准：潜在年采购额 × 匹配度 × 赢单可能性。买家角色：<b>采购</b>看起订量、交期、零售倍率；<b>品牌 / 授权</b>看还原度和防伪；<b>法务</b>看合规与 IP 条款。</p>
+
+  <h3>定位：价值主张、参照系、POP / POD</h3>
+  <div class="grid g2">
+    <div class="card"><h4>参照系与共同点 / 差异点</h4>
+      <p class="small"><b>参照系（品类成员）</b>：冰箱贴 / 收藏贴纸 / 收藏卡（对标正版 3D 泡棉冰箱贴、光栅贴）。</p>
+      <p class="small"><b>共同点（POP）</b>：$6–15 价格带、正版或原创图案、贴得牢、好送礼、可收藏成套。</p>
+      <p class="small"><b>差异点（POD）</b>：① 图案<b>真实悬浮</b>，不用转角度、不用通电、不用眼镜；② <b>极难仿制</b>的纳米级结构 = 正版证明；③ 超薄轻巧，一张膜片能做冰箱贴、卡牌、手机贴、包装。</p>
+      <p class="small"><b>化解冲突利益点</b>：“科技感 vs 艺术感”→ 讲“光的艺术”；“新奇 vs 耐用”→ 承诺 UV 稳定、防水、不褪色（待检测报告）。</p></div>
+    <div class="card"><h4>定位声明（Brand Positioning Statement）</h4>
+      <div class="callout small" style="margin-top:0">对于<b>想让收藏与众不同、又在意正版的 Z 世代 IP 粉丝和冰箱贴收藏者</b>，<b>FLOATORY</b> 是一种<b>会让图案浮在空中的收藏周边</b>。和光栅贴、3D 泡棉贴不同，它用专利微纳光学让图案以裸眼实像悬浮，不需要电源，<b>几乎无法被仿制</b>。</div>
+      <p class="small"><b>口号候选</b>（P0 做 A/B 测试）：<br>① <i>“See it float.”</i>　② <i>“Magic you can stick.”</i>　③ <i>“Real merch floats.”</i>（主打防伪）</p>
+      <p class="small"><b>顾客总价值</b>：功能（浮空效果、耐用）+ 心理（炫耀、收藏、正版安心）+ 货币（$12.9 对标 $10.99 正版泡棉贴，只贵 17%）。<b>顾客总成本</b>：价格 + 搜索成本（用“认准浮空即正版”降低）+ 风险成本（30 天无忧退换）。</p></div>
+  </div>
+  <div class="house" style="margin-top:16px">
+    <div class="roof">品牌屋 · FLOATORY<small>愿景：让每一份热爱都“浮”出来，成为全球最可信的正版收藏载体</small></div>
+    <div class="pillars">
+      <div><h4>✨ 支柱 1：看得见的魔法</h4><p class="small">裸眼浮空实像、景深可定制<br><b>证据</b>：微距视频、对比测试（vs 光栅 / 泡棉）、专利号</p></div>
+      <div><h4>🛡️ 支柱 2：正版的证明</h4><p class="small">30nm 级结构难以仿制，“浮起来才是真的”<br><b>证据</b>：中烟防伪项目、第三方鉴定说明、序列号</p></div>
+      <div><h4>🎨 支柱 3：创作者优先</h4><p class="small">原创 IP、画师 / VTuber 联名分成，限量编号<br><b>证据</b>：联名画师名单、分成公示</p></div>
+    </div>
+    <div class="base"><b>品牌个性</b>：好奇、精致、俏皮的极客感。<b>信任背书</b>：国家高新技术企业、浙江省专精特新、宁波市科技进步二等奖、院士团队 <span class="ev">I-1</span>。<b>原产地</b>：如实标注 “Designed with optics invented in China”，用技术实力化解“中国货便宜”的刻板印象。</div>
+  </div>
+</section>
+
+<!-- ================= ④ 7T ================= -->
+<section class="sec" id="m4">
+  <div class="sec-h"><span class="no">④ 7T</span><h2>营销组合：产品、服务、品牌、价格、激励、沟通、分销</h2></div>
+  <p class="sec-lead">采用切尔内夫 7T 框架。C 端和 B 端在同一框架下分开写。所有费用都引用 ⑦ 的预算科目，随总预算联动。</p>
+
+  <h3>T1 产品策略：产品线规划</h3>
+  <div class="tbl"><table>
+    <tr><th>系列 / SKU</th><th>规格</th><th>产品角色</th><th>美国零售价</th><th>经营口径</th><th>上新节奏</th></tr>
+    <tr><td><b>FLOAT Magnet 浮空冰箱贴</b></td><td>60×80mm 浮空膜 + 全背软磁（无可脱落小磁粒）</td><td><span class="pill">利润款 / 主力</span></td><td>$12.90；3 件装 $32</td><td>C 端零售</td><td>首批 12 款（原创 6 + 公版名画 4 + 联名 2），每月 2 款新品</td></tr>
+    <tr><td><b>FLOAT Card 浮空收藏卡</b></td><td>63×88mm 卡牌尺寸，盲包（5 普通 + 1 隐藏）</td><td><span class="pill c">引流 / 复购款</span></td><td>$6.90 / 包；整盒 $36</td><td>C 端零售</td><td>每季 1 个系列</td></tr>
+    <tr><td><b>FLOAT Sticker 浮空贴纸</b></td><td>Ø50mm，手机 / 电脑贴</td><td><span class="pill c">引流款</span></td><td>$5.90；东南亚主推</td><td>C 端零售</td><td>随系列发售</td></tr>
+    <tr><td><b>Genesis 创始藏家套装</b></td><td>6 枚编号冰箱贴 + 证书 + 展示框</td><td><span class="pill h">形象款</span></td><td>$59（限量 300 套）</td><td>C 端零售 / PR</td><td>P1 一次性发售</td></tr>
+    <tr><td><b>Custom Float B 端定制</b></td><td>定制浮空图案 / LOGO / 馆藏；冰箱贴、卡、包装贴</td><td><span class="pill g">新增长点</span></td><td>$1.0–1.5 / 片（起订 3,000）</td><td>B 端批发 / OEM</td><td>按需；样品 10 个工作日 <span class="ev a">假设</span></td></tr>
+  </table></div>
+  <div class="grid g3">
+    <div class="card"><h4>选品依据</h4><p class="small"><b>需求</b>：冰箱贴相关搜索以 custom / photo / souvenir 为主；粉丝要正版 <span class="ev d">A-S26</span><span class="ev d">A-S99</span>。<b>竞品</b>：$5.9–11 价格带饱和，缺“高级感”产品 <span class="ev d">A-S136</span>。<b>供给</b>：膜片可量产，景深可定制 <span class="ev">I-1</span>。</p></div>
+    <div class="card"><h4>IP 内容策略（首年不付保底）</h4><ul class="clean small"><li><b>原创 IP</b>：1 套品牌 IP（如浮空小龙 “Levi”），用于品牌资产积累</li><li><b>公版名画</b>：北斋《神奈川冲浪里》、梵高《星空》等，零授权费</li><li><b>联名</b>：独立画师 / VTuber，分成 15–25%，不付保底</li><li><b>P3 起</b>：用销售数据谈正式授权（版税 5–10%，热门 IP 15% 以上 <span class="ev d">A-S93</span><span class="ev d">A-S94</span>）</li></ul></div>
+    <div class="card"><h4>生命周期与淘汰</h4><p class="small">每款首批 300 片；30 天售罄率 &lt; 30% 即停产，&gt; 70% 追加。每季度按 BCG 矩阵复盘：明星款（高增长、高份额）扩系列，问题款换图换价。<b>严禁</b>做任何未授权粉丝同人图（侵权风险，参见“Naruto 500 万美元诉讼” <span class="ev d">A-S148</span>）。</p></div>
+  </div>
+
+  <h3>T2 服务策略 · T3 品牌策略</h3>
+  <div class="grid g2">
+    <div class="card"><h4>服务承诺（针对主要顾虑）</h4><ul class="clean small">
+      <li><b>怕效果不如视频</b> → “Float or Free”：效果不满意 30 天免费退</li>
+      <li><b>怕盗版</b> → 每枚带序列号，官网可查真伪；浮空结构本身就是防伪</li>
+      <li><b>怕掉 / 怕伤冰箱</b> → 全背软磁、无小磁粒（符合 CPSC 思路 <span class="ev d">A-S153</span>）</li>
+      <li><b>B 端</b>：样品政策（标准样品包免费，定制样品 $199 可抵货款）、检测报告、交期承诺、质保</li>
+      <li><b>SERVQUAL</b>：响应性（24 小时内回复）、保证性（检测报告）、有形性（开箱体验）</li></ul></div>
+    <div class="card"><h4>品牌元素</h4><ul class="clean small">
+      <li><b>名称</b>：FLOATORY（float + story / factory）<span class="ev a">工作名</span>，P0 先在 USPTO、EUIPO、WIPO Madrid 做商标检索，备选名 LEVITA、AIRLUME</li>
+      <li><b>标志</b>：悬浮的字母 “O” 加投影（呼应浮空）；包装：透明开窗 + “Tilt-free. Power-free. Fake-free.”</li>
+      <li><b>B 端品牌</b>：用企业品牌 “LAIZHOME Optics” 加创始人 / 院士专家个人 IP，在 LinkedIn 发技术内容</li>
+      <li><b>品牌资产追踪</b>：知晓度（品牌搜索量、提示后知晓度）、联想（“正版”“魔法”）、偏好与忠诚（复购、NPS），每季度测一次</li></ul></div>
+  </div>
+
+  <h3>T4 价格策略（C 端 + B 端）</h3>
+  <div class="grid g2">
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>市场</th><th>冰箱贴</th><th>卡牌盲包</th><th>贴纸</th><th>参照（当地中位价）</th></tr>
+      <tr><td>🇺🇸 美国</td><td>$12.90</td><td>$6.90</td><td>$5.90</td><td>正版泡棉 $10.99 <span class="ev d">A-S136</span></td></tr>
+      <tr><td>🇬🇧 英国</td><td>£10.90</td><td>£5.90</td><td>£4.90</td><td>动漫冰箱贴 £6.99 <span class="ev d">A-S55</span></td></tr>
+      <tr><td>🇩🇪 德国（P3 起）</td><td>€12.90</td><td>€6.90</td><td>€5.90</td><td>动漫冰箱贴 €7.66 <span class="ev d">A-S57</span></td></tr>
+      <tr><td>🇦🇪 阿联酋</td><td>AED 49</td><td>AED 25</td><td>AED 22</td><td>动漫冰箱贴 AED 29；纪念品 AED 22 <span class="ev d">B-S28</span><span class="ev d">B-S62</span></td></tr>
+      <tr><td>🇵🇭 菲律宾</td><td>₱449</td><td>₱199</td><td>₱179</td><td>高端浮雕冰箱贴 ₱300；低价 ₱15 <span class="ev d">B-S64</span></td></tr>
+      <tr><td>🇹🇭 泰国（P3 起）</td><td>฿349</td><td>฿159</td><td>฿139</td><td>样本不足 <span class="ev c">缺口</span></td></tr>
+    </table></div>
+    <div class="card"><h4>定价逻辑</h4><ul class="clean small">
+      <li><b>定价目标</b>：质量领先 + 适度撇脂（比正版泡棉贴贵约 17%），用顾客感知价值定价</li>
+      <li><b>产品组合定价</b>：贴纸 / 卡牌引流，冰箱贴赚利润，Genesis 套装撑形象；捆绑（3 件装省 $6.7）</li>
+      <li><b>价格纪律</b>：全站折扣每年最多 2 次（黑五、周年庆），上限 20%；优先用赠品、编号、隐藏款等非价格激励</li>
+      <li><b>B 端报价</b>：阶梯价（3k / 10k / 30k 片）；FOB 宁波或 DDP 美国；T/T 30% 预付；定制打样费可抵货款；年度框架合同加汇率联动条款</li>
+      <li><b>渠道价格</b>：统一 MAP（最低广告价）；批发价约为零售价的 40–45%，零售商倍率 2.2–2.5</li></ul></div>
+  </div>
+
+  <h3>T5 激励策略</h3>
+  <div class="grid g3">
+    <div class="card"><h4>消费者（C 端）</h4><ul class="clean small"><li><b>Founding Collector</b>：前 300 名得编号徽章、新品抢先购、Discord 专属身份</li><li><b>推荐奖励</b>：双向各得 $5 抵用券</li><li><b>集卡</b>：集齐一套换隐藏款</li><li><b>晒单</b>：冰箱墙晒图加话题，每月抽奖</li></ul></div>
+    <div class="card"><h4>企业客户（B 端）</h4><ul class="clean small"><li>首单打样费抵扣</li><li>年度返利 3–5%（达到采购额门槛）</li><li>联合开发：对方馆藏 / IP 首发 3 个月独家</li></ul></div>
+    <div class="card"><h4>渠道与评估</h4><ul class="clean small"><li>零售商：陈列支持（台卡、发光展示架）、培训视频</li><li>MAP 与区域保护</li><li><b>效果评估</b>：每次激励设对照组（未发码人群），看增量和激励结束后的销量回落 <span class="ev a">方法</span></li></ul></div>
+  </div>
+
+  <h3>T6 沟通策略：目标、受众、信息、媒介</h3>
+  <div class="grid g2">
+    <div class="card"><h4>沟通目标与预算（目标任务法）</h4>
+      <ul class="clean small">
+        <li><b>知晓</b>：内容总曝光 <span class="kv" data-kpi="reach"></span>（付费 <span class="kv" data-kpi="impr"></span> + 达人 <span class="kv" data-kpi="cviews"></span>）</li>
+        <li><b>偏好</b>：品牌搜索量月环比 +20%；Discord / 邮件 <span class="kv" data-kpi="community"></span></li>
+        <li><b>行动</b>：付费种子用户 <span class="kv" data-kpi="customers"></span>；B 端试点 <span class="kv" data-kpi="pilots"></span></li>
+        <li><b>投入</b>：内容 <span class="m" data-x="content"></span>，达人 <span class="m" data-x="creator"></span>，付费 <span class="m" data-x="ads"></span>，社群 <span class="m" data-x="community"></span></li>
+        <li><b>决定因素</b>：新品类、差异化高、需要教育（信息复杂）→ 内容和种草要高频，付费只放大已验证的素材</li></ul></div>
+    <div class="card"><h4>核心信息屋</h4>
+      <ul class="clean small">
+        <li><b>主信息</b>：<i>“It's not a sticker. It's floating.”</i>（3 秒钩子：手指“穿过”浮空图案）</li>
+        <li><b>信息型诉求</b>：对比实验（光栅 vs 泡棉 vs 浮空）；“无电源、无眼镜、无条纹”</li>
+        <li><b>转换型诉求</b>：收藏墙的满足感；“把旅行记忆 / 喜欢的角色浮起来”</li>
+        <li><b>防伪诉求</b>：“If it doesn't float, it's fake.”</li>
+        <li><b>信息源</b>：真实用户 &gt; 收藏博主 &gt; 院士科学家（科普短片）&gt; 创始人（B 端 LinkedIn）</li></ul></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>媒介</th><th>类型</th><th>角色</th><th>平台 / 形式</th><th class="num">预算</th><th>KPI</th></tr>
+    <tr><td>短视频与社媒</td><td>自有</td><td>认知、诉求</td><td>TikTok、IG Reels、YouTube Shorts：每周 5 条；微距浮空、开箱、冰箱墙改造</td><td class="num"><span class="m" data-x="content*0.6"></span></td><td>3 秒留存 ≥ 40%，分享率</td></tr>
+    <tr><td>达人种草</td><td>付费 / 免费</td><td>诉求、询问</td><td>Nano / micro 达人（TikTok 中位 $150–290 / 条 <span class="ev d">A-S132</span>）+ 寄样；TikTok Shop 联盟佣金 15–20%</td><td class="num"><span class="m" data-x="creator"></span></td><td>UGC <span data-kpi="ugc"></span> 条、专属码转化</td></tr>
+    <tr><td>付费放大</td><td>付费</td><td>行动</td><td>TikTok Spark Ads（投放达人 UGC，CTR 3%+ <span class="ev d">B-S49</span>）60%；Meta Advantage+ 40%，用于再营销和相似人群</td><td class="num"><span class="m" data-x="ads"></span></td><td>CPA ≤ $20，ROAS ≥ 1.3</td></tr>
+    <tr><td>搜索（SEO / GEO）</td><td>自有</td><td>询问</td><td>官网博客：“What is a floating image sticker”“lenticular vs floating”；结构化 FAQ，争取 AI 回答引用</td><td class="num">内容预算内</td><td>品类词排名前 10、AI 提及</td></tr>
+    <tr><td>社区与活动</td><td>免费 / 付费</td><td>拥护</td><td>Discord、Reddit（以真实身份参与，遵守版规）、漫展合租摊位（Anime Expo、MCM、MEFCC）</td><td class="num"><span class="m" data-x="community"></span></td><td>社群人数、活跃度</td></tr>
+    <tr><td>PR</td><td>免费</td><td>认知、信任</td><td>科技与潮玩媒体（The Verge、Hypebeast、Toy Book、License Global）稿件：“The sticker that can't be faked”</td><td class="num">内容预算内</td><td>报道 ≥ 5 篇</td></tr>
+    <tr><td>B 端人员销售</td><td>付费</td><td>B 端漏斗</td><td>样品包 + LinkedIn 创始人内容 + 展会（以观众身份参加 Licensing Expo / BLE）</td><td class="num"><span class="m" data-x="samples*0.5"></span></td><td>SQL、试点</td></tr>
+  </table></div>
+  <div class="grid g2">
+    <div class="card"><h4>排期策略：脉冲式</h4><p class="small">低水平连续投放，配合 4 个波峰强化：① 3 月软启动；② 7 月漫展季（Anime Expo / SDCC）；③ 8–9 月返校与收藏季（收藏品搜索 +27% <span class="ev d">A-S51</span>）；④ 11–12 月黑五、圣诞、12.12。TikTok 周四 CPM 比周六贵 33%，黑五 CPM 升到 $6.26 <span class="ev d">A-S125</span>，所以付费预算要提前 2 周锁定素材。</p></div>
+    <div class="card"><h4>创意评估（ADPLAN）</h4><p class="small"><b>A</b> 注意力：3 秒内出现浮空；<b>D</b> 区分度：不能像光栅；<b>P</b> 定位：落在“魔法 + 正版”；<b>L</b> 联动：每条结尾都有 FLOATORY 浮空 Logo；<b>A</b> 放大：带话题 #ItFloats；<b>N</b> 净资产：积累品牌资产，不靠打折。</p></div>
+  </div>
+
+  <h4>B 端人员销售与 ABM</h4>
+  <div class="flow small">
+    <div class="st">线索<br><span class="muted">展会、LinkedIn、官网表单</span></div><span class="ar">➜</span>
+    <div class="st">资格判断 BANT</div><span class="ar">➜</span>
+    <div class="st">需求沟通<br><span class="muted">SPIN</span></div><span class="ar">➜</span>
+    <div class="st">样品 / 方案<br><span class="muted">用对方 IP 做样张</span></div><span class="ar">➜</span>
+    <div class="st">报价<br><span class="muted">阶梯价、TCO</span></div><span class="ar">➜</span>
+    <div class="st">试点订单</div><span class="ar">➜</span>
+    <div class="st">复购 / 年框</div>
+  </div>
+  <p class="small">A 级客户用 ABM：选定 10 个账户 → 画购买中心 → 用对方馆藏或 IP 做 3 张定制浮空样张 → 创始人亲自跟进 → 每周更新账户进展。<b>SLA</b>：询盘 24 小时内回复，MQL 48 小时内转给销售。</p>
+
+  <h3>T7 分销策略：渠道设计与管理</h3>
+  <div class="tbl"><table>
+    <tr><th>渠道</th><th>市场</th><th>阶段</th><th>角色</th><th>服务产出</th><th>费率 / 成本</th></tr>
+    <tr><td>官网 DTC（Shopify）</td><td>全球（先美、英）</td><td>P0</td><td>品牌主阵地、首方数据、Genesis 套装</td><td>全系列、序列号查询</td><td>约 3% 支付费</td></tr>
+    <tr><td>TikTok Shop</td><td>美国 → 英国 → 菲律宾 → 泰国</td><td>P1–P3</td><td>内容带货，联盟达人</td><td>冲动购买、直播</td><td>美国佣金 6%、英国 9% <span class="ev d">B-S60</span>；菲律宾综合 14–17% <span class="ev d">B-S55</span></td></tr>
+    <tr><td>Etsy</td><td>美、英、欧</td><td>P1</td><td>原创 / 艺术家联名，触达“手作 / 艺术”人群</td><td>小批量</td><td>上架费 + 6.5% 交易费</td></tr>
+    <tr><td>Shopee / Lazada</td><td>菲律宾、泰国</td><td>P2–P3</td><td>搜索型补充</td><td>大促（9.9–12.12）</td><td>综合 20–25% <span class="ev d">B-S55</span></td></tr>
+    <tr><td>B 端：博物馆 / 景区 / 零售</td><td>英、美、阿联酋</td><td>P1 起</td><td>选择性分销，形象 + 回款</td><td>货架陈列</td><td>批发折扣 55–60%</td></tr>
+    <tr><td>Amazon / noon</td><td>美 / 中东</td><td>P3 之后</td><td>规模化（有评价积累后）</td><td>FBA / FBN 快速配送</td><td>约 15% + 履约费</td></tr>
+  </table></div>
+  <p class="small"><b>渠道管理</b>：挑选成员看经营年限、信用、覆盖、服务、品牌匹配；考核售罄率、库存天数、价格纪律。主要依靠<b>专家权力</b>（独家技术）和<b>奖励权力</b>（返利、首发独家）。<b>水平营销系统</b>：与 IP 方 / 博物馆共同开发浮空联名款；<b>垂直系统</b>：首年用管理式（我方主导标准），不做合同式加盟。</p>
+</section>
+
+<!-- ================= ⑤ 顾客旅程 ================= -->
+<section class="sec" id="m5">
+  <div class="sec-h"><span class="no">⑤ JOURNEY</span><h2>顾客旅程、种子用户计划与首方数据</h2></div>
+  <p class="sec-lead">C 端用 5A 路径，B 端用采购旅程和询盘漏斗。本项目以“冰箱贴种子用户”为核心：<b>先找 100 位创始藏家，再从 100 扩到 <span data-kpi="customers"></span> 位付费用户</b>。</p>
+
+  <h3>C 端 5A 路径与触点</h3>
+  <div class="tbl"><table>
+    <tr><th>阶段</th><th>顾客在做什么</th><th>我们的触点</th><th>指标</th></tr>
+    <tr><td><b>认知 Aware</b></td><td>刷到“手指穿过浮空图案”的视频</td><td>达人 UGC、Spark Ads、漫展</td><td>曝光、3 秒留存</td></tr>
+    <tr><td><b>诉求 Appeal</b></td><td>“这是真的吗？哪里买？”</td><td>评论区置顶解释、对比视频、品牌主页</td><td>互动率、主页访问</td></tr>
+    <tr><td><b>询问 Ask</b></td><td>搜 Google / Reddit / 问 AI</td><td>SEO 博客、Reddit AMA、FAQ（GEO）</td><td>品牌搜索量、AI 提及率</td></tr>
+    <tr><td><b>行动 Act</b></td><td>买 1 枚试试 / 买 3 件装</td><td>官网、TikTok Shop，“Float or Free”承诺</td><td>转化率、客单价、退货率</td></tr>
+    <tr><td><b>拥护 Advocate</b></td><td>晒冰箱墙、集卡、推荐朋友</td><td>Discord、推荐奖励、集卡活动</td><td>复购率、NPS、推荐率</td></tr>
+  </table></div>
+
+  <h3>🌱 种子用户计划：Founding 100 → <span data-kpi="customers"></span></h3>
+  <div class="grid g3">
+    <div class="card dark"><h4>第 1 步：找到 100 位创始藏家（P0–P1）</h4><ul class="clean small">
+      <li>来源：TikTok 冰箱贴收藏博主（#magnetcollection）、Reddit 收藏版块、Discord 动漫社群、漫展 cosplayer</li>
+      <li>动作：免费寄送 Genesis 样品，并邀请共创（投票决定下一款图案）</li>
+      <li>预算：样品 <span class="m" data-x="samples*0.5"></span> + 社群 <span class="m" data-x="community*0.4"></span></li>
+      <li>门槛：≥ 40% 的人主动发布内容</li></ul></div>
+    <div class="card dark"><h4>第 2 步：用内容放大（P1–P2）</h4><ul class="clean small">
+      <li>把创始藏家的 UGC 授权给 Spark Ads 投放</li>
+      <li>达人：付费 <span class="kv" data-kpi="pcreators"></span> 位 + 寄样 <span class="kv" data-kpi="gcreators"></span> 位</li>
+      <li>每人专属折扣码和 UTM，按单结算佣金</li>
+      <li>门槛：混合 CPA ≤ $25（P1）→ ≤ $20（P2）</li></ul></div>
+    <div class="card dark"><h4>第 3 步：留存与裂变（P2–P3）</h4><ul class="clean small">
+      <li>集卡、隐藏款、编号限量，带动复购</li>
+      <li>双向推荐奖励 $5</li>
+      <li>每月“冰箱墙大赛”，让用户共创图案</li>
+      <li>门槛：90 天复购 ≥ 20%，NPS ≥ 50</li></ul></div>
+  </div>
+
+  <h3>B 端采购旅程与询盘漏斗</h3>
+  <div class="grid g2">
+    <div class="card"><h4>漏斗定义（年度目标随预算联动）</h4>
+      <div class="tbl" style="box-shadow:none"><table>
+        <tr><th>阶段</th><th>进入标准</th><th class="num">目标</th></tr>
+        <tr><td>目标账户</td><td>符合 ICP（A / B 级）</td><td class="num">60</td></tr>
+        <tr><td>MQL</td><td>回复 / 下载资料 / 展位到访</td><td class="num"><span data-kpi="mql"></span></td></tr>
+        <tr><td>SQL（寄样）</td><td>BANT 达标 → 寄出样品包</td><td class="num"><span data-kpi="b2bkits"></span></td></tr>
+        <tr><td>试点订单</td><td>首单付款</td><td class="num"><span data-kpi="pilots"></span></td></tr>
+        <tr><td>年框 / LOI</td><td>续单或授权意向</td><td class="num">≥ 1</td></tr>
+      </table></div></div>
+    <div class="card"><h4>线索评分与培育</h4><ul class="clean small">
+      <li><b>匹配度（40 分）</b>：行业、年采购额、地区</li>
+      <li><b>意向度（60 分）</b>：询价（+30）、索样（+20）、展位到访（+10）、打开资料（+5）</li>
+      <li>≥ 60 分转给销售；&lt; 60 分进入 6 封邮件培育序列（案例、防伪原理、样张）</li>
+      <li>获客渠道组合：LinkedIn 创始人内容 + 定向开发信 + 展会 + 官网 B 端页面（SEO：“custom floating image sticker supplier”）</li></ul></div>
+  </div>
+
+  <h3>首方数据与生命周期</h3>
+  <div class="grid g3">
+    <div class="card"><h4>采集</h4><p class="small">官网订单与行为（GA4 + 服务器端转化）、邮件 / SMS 订阅（Klaviyo 免费档起步）、购后问卷（“你从哪里知道我们？”）、Discord 身份。遵守 GDPR / CCPA：明示同意、可退订。</p></div>
+    <div class="card"><h4>分群（RFM）</h4><p class="small">新客 / 复购 / 收藏家（单年 ≥ 4 单）/ 送礼者；按 IP 偏好打标签（原创、公版、联名）。B 端按账户分级（A / B / C）。</p></div>
+    <div class="card"><h4>生命周期流程</h4><p class="small">欢迎流（3 封）→ 弃购召回（2 封）→ 购后教育（拍摄浮空效果的技巧）→ 新品预告 → 集卡提醒 → 生日券；B 端：询盘自动回复 → 培育 → 季度业务复盘。</p></div>
+  </div>
+</section>
+
+<!-- ================= ⑥ 进入与本地化 ================= -->
+<section class="sec" id="m6">
+  <div class="sec-h"><span class="no">⑥ ENTRY</span><h2>市场进入、本地化与合规</h2></div>
+  <p class="sec-lead">按乌普萨拉模型分阶段进入：先低投入试点，验证后加码。四大区域分工不同，<b>北美打品牌，欧洲打口碑和授权，东南亚测价和测内容，中东打 B 端</b>。</p>
+
+  <h3>四大区域进入决策</h3>
+  <div class="tbl"><table>
+    <tr><th>区域（重点国家）</th><th>优先级 / 时点</th><th>进入方式</th><th>本地化</th><th class="num">年度预算份额</th><th>首年目标</th></tr>
+    <tr><td><b>🇺🇸 北美</b>（美国；加拿大顺带覆盖）</td><td><span class="pill h">P1 主战场</span> 2027-03</td><td>DTC + TikTok Shop US + Etsy；美国海外仓（大货进口，规避小额包裹限制）</td><td>英文；美元定价；节日（返校、万圣节、黑五、圣诞）</td><td class="num"><span class="m" data-r="NA"></span></td><td>70% 的 C 端用户；CPA 验证</td></tr>
+    <tr><td><b>🇪🇺 欧洲</b>（英国 → 德国）</td><td><span class="pill c">P2</span> 英国 2027-06；德国 2027 Q4 试水</td><td>英国：TikTok Shop UK + Etsy + 博物馆店 B 端；德国：Etsy / Amazon.de 小规模测试</td><td>英国复用英文素材；德国做德语详情页与包装、GPSR 标签</td><td class="num"><span class="m" data-r="EU"></span></td><td>BLE 授权展 → 1 份 LOI；英国 B 端试点 1 单</td></tr>
+    <tr><td><b>🌏 东南亚</b>（菲律宾 → 泰国）</td><td><span class="pill o">P1 测试</span> 菲律宾 2027-03；泰国 P3</td><td>TikTok Shop 跨境 + Shopee 跨境；联盟达人（TikTok 占当地达人营销 64–66% <span class="ev d">B-S54</span>）</td><td>菲律宾用英文 + 他加禄语字幕；泰国用泰语；当地价格带</td><td class="num"><span class="m" data-r="SEA"></span></td><td>价格弹性和内容模板验证；9.9–12.12 大促</td></tr>
+    <tr><td><b>🇦🇪 中东</b>（阿联酋 → 沙特）</td><td><span class="pill gray">P1 B 端</span>；C 端 2028</td><td>B 端：迪拜景区 / 免税店纪念品、动漫店寄售（Geekay、Little Things）；参加 MEFCC</td><td>阿拉伯语 + 英语双语包装；地标与伊斯兰几何图案；斋月 / 开斋节礼盒</td><td class="num"><span class="m" data-r="ME"></span></td><td>1 个景区或零售试点；旅游恢复后再扩大</td></tr>
+  </table></div>
+  <p class="muted">区域份额可在 ⑦ 预算控制台调整。默认：北美 45% / 欧洲 20% / 东南亚 20% / 中东 10% / 全球共用 5%。</p>
+
+  <h3>标准化 vs 本地化</h3>
+  <div class="grid g2">
+    <div class="card"><h4>全球统一</h4><ul class="clean small"><li>技术标准、品牌名、Logo、核心信息“It floats / Real merch floats”</li><li>序列号防伪体系、质量与退换承诺</li><li>原创 IP 角色</li></ul></div>
+    <div class="card"><h4>本地调整</h4><ul class="clean small"><li><b>图案</b>：英国（伦敦地标、大英博物馆馆藏）、阿联酋（哈利法塔、未来博物馆）、菲律宾（吉普尼、本地 IP 联名）、泰国（寺庙艺术，参考 ANONA 哈努曼开瓶器 <span class="ev d">B-S34</span>）</li><li><b>价格</b>：见 T4；<b>渠道</b>：东南亚以平台为主，欧美以 DTC 为主</li><li><b>团队</b>：首年用当地兼职社群运营（美国、菲律宾各 1 名，按小时计），产品和供应链留在宁波</li></ul></div>
+  </div>
+
+  <h3>合规清单</h3>
+  <div class="tbl"><table>
+    <tr><th>领域</th><th>要求</th><th>动作</th><th class="num">预算</th></tr>
+    <tr><td>知识产权（最高优先级）</td><td>商标（美国、欧盟、英国、阿联酋、菲律宾）；严禁未授权 IP</td><td>P0 先做商标检索，再走马德里体系；联名合同明确版权归属与分成</td><td class="num"><span class="m" data-x="legal*0.55"></span></td></tr>
+    <tr><td>🇺🇸 产品安全</td><td>CPSC 16 CFR 1262 管“娱乐、珠宝、减压”类磁铁产品，可脱落小磁铁的磁通指数须 &lt; 50 <span class="ev d">A-S153</span>；加州 65 号提案</td><td>采用全背软磁、无可脱落小磁粒；标注 14+，不按儿童玩具定位；第三方检测</td><td class="num" rowspan="2"><span class="m" data-x="legal*0.45"></span></td></tr>
+    <tr><td>🇪🇺 / 🇬🇧 产品安全</td><td>GPSR：欧盟责任人、标签、可追溯、技术文件 <span class="ev d">A-S87</span>；英国 UKCA / OPSS</td><td>欧盟 / 英国责任人服务（约 $500 / 年起 <span class="ev d">A-S86</span>）；德国上线前完成</td></tr>
+    <tr><td>🇦🇪 阿联酋</td><td>MoIAT ECAS / EQM（玩具等受管品类）<span class="ev d">B-S42</span></td><td>以家居装饰 / 文具品类申报；B 端客户负责进口清关，我方提供检测报告</td><td class="num">由客户承担</td></tr>
+    <tr><td>广告与达人</td><td>FTC 背书指南（#ad 标注）；英国 ASA</td><td>达人合同强制披露条款</td><td class="num">—</td></tr>
+    <tr><td>关税与原产地</td><td>美国取消小额豁免 <span class="ev d">B-S60</span>；如实标注原产地</td><td>大货 DDP 进美国海外仓；HS 编码预归类（磁贴 8505.19 / 印刷品 4911）</td><td class="num">计入货品成本</td></tr>
+    <tr><td>隐私</td><td>GDPR / CCPA / 菲律宾 DPA</td><td>Cookie 横幅、同意管理、数据最小化</td><td class="num">工具预算内</td></tr>
+  </table></div>
+</section>
+<!-- ================= ⑦ 执行 ================= -->
+<section class="sec" id="m7">
+  <div class="sec-h"><span class="no">⑦ EXECUTION</span><h2>执行：年度日历、组织分工、预算排期</h2></div>
+  <p class="sec-lead">路线图：准备期 → 软启动 → 正式发布 → 旺季 → 复盘。战役结构固定为“洞察 → 创意 → 传播组合 → KPI”。所有金额由下方预算控制台统一驱动。</p>
+
+  <h3>年度营销日历（2026-12 → 2027-12）</h3>
+  <div class="tbl"><table id="calTable">
+    <tr><th>月份</th><th>阶段</th><th>主题 / 战役</th><th>重点产品</th><th>关键节点（C 端 / B 端）</th><th>主市场</th><th class="num">当月预算</th></tr>
+  </table></div>
+  <p class="muted">节点日期为预估：斋月约 2027-02-08 至 03-09，开斋节约 03-10，宰牲节约 05-16；Licensing Expo（拉斯维加斯，通常 5 月）、Anime Expo（洛杉矶，7 月初）、SDCC（7 月下旬）、BLE（伦敦，10 月）、NYCC（10 月）、MEFCC（阿布扎比，2026 年于 9 月举办 <span class="ev d">B-S69</span>）。黑五为 2027-11-26。日期以主办方公告为准。</p>
+
+  <h3>组织与 RACI</h3>
+  <div class="grid g2">
+    <div class="card"><h4>精益编制（首年）</h4><ul class="clean small">
+      <li><b>CMO / 增长负责人</b>（兼任）：策略、预算、数据复盘</li>
+      <li><b>内容设计师 ×1</b>（宁波，全职）：浮空图案、微距视频、包装</li>
+      <li><b>海外社群与达人运营 ×2</b>（美国、菲律宾兼职，按小时计）：Discord、达人寄样、TikTok Shop 联盟</li>
+      <li><b>B 端销售 ×1</b>（复用公司现有销售团队）：样品包、报价、展会</li>
+      <li><b>外部伙伴</b>：海外仓、商标代理、GPSR 代表、检测机构</li>
+      <li><b>决策机制</b>：每周增长例会（数据看板）；每月预算会（调仓）；每季度复盘（回写计划）；B 端每两周开一次线索复盘会</li></ul></div>
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>任务</th><th>CMO</th><th>内容</th><th>社群 / 达人</th><th>B 端销售</th><th>研发 / 生产</th></tr>
+      <tr><td>品牌与定位</td><td>A/R</td><td>C</td><td>C</td><td>I</td><td>C</td></tr>
+      <tr><td>产品与图案开发</td><td>A</td><td>R</td><td>C</td><td>C</td><td>R</td></tr>
+      <tr><td>内容生产</td><td>A</td><td>R</td><td>C</td><td>I</td><td>I</td></tr>
+      <tr><td>达人与社群</td><td>A</td><td>C</td><td>R</td><td>I</td><td>I</td></tr>
+      <tr><td>付费投放</td><td>A/R</td><td>C</td><td>C</td><td>—</td><td>—</td></tr>
+      <tr><td>B 端开发与报价</td><td>A</td><td>C</td><td>I</td><td>R</td><td>C</td></tr>
+      <tr><td>合规与商标</td><td>A</td><td>I</td><td>I</td><td>C</td><td>R</td></tr>
+      <tr><td>数据与复盘</td><td>A/R</td><td>C</td><td>C</td><td>C</td><td>I</td></tr>
+    </table><p class="muted" style="padding:6px 10px">R 执行，A 负责，C 咨询，I 知会</p></div>
+  </div>
+
+  <!-- ===== 预算控制台 ===== -->
+  <h3 id="budget">💰 年度营销预算控制台（可调整）</h3>
+  <div class="console">
+    <div class="total-row">
+      <div><h4>年度总预算（USD）</h4><input type="number" id="totalInput" min="1000" step="500" value="10000"></div>
+      <div style="flex:1;min-width:260px"><input type="range" id="totalRange" min="2000" max="100000" step="500" value="10000" style="width:100%"><div class="presets" style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap"><button data-p="5000">$5k</button><button data-p="10000">$10k（当前方案）</button><button data-p="20000">$20k</button><button data-p="50000">$50k</button><button id="resetAlloc">恢复默认分配</button></div></div>
+    </div>
+    <div class="alloc" id="allocGrid"></div>
+    <div class="sumline" id="sumLine"></div>
+
+    <details style="background:#141b33;border-color:#2b3460;color:#cfd5f0;margin-top:16px"><summary style="color:#fff">区域分配（%）· 四大区域</summary><div class="alloc" id="regionGrid"></div><div class="sumline" id="regionSum"></div></details>
+    <details style="background:#141b33;border-color:#2b3460;color:#cfd5f0"><summary style="color:#fff">预测模型假设参数（可修改，默认值来自附录基准）</summary>
+      <div class="assume" id="assumeGrid"></div>
+      <p class="muted" style="color:#8d97c2">基准：TikTok 电商 CPM $4.08–12.40、CTR 0.61–1.0%、CVR 1.56% <span class="ev d">A-S121</span><span class="ev d">B-S48</span>；Meta CPM 约 $15 <span class="ev d">A-S123</span>；nano / micro 达人 $150–290 / 条 <span class="ev d">A-S132</span>。其余为【假设】，按 ⑨ 测试结果更新。</p>
+    </details>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="chart"><div class="ct">预算结构</div><div class="cs">随总预算和分配比例实时更新</div><div id="chartDonut"></div></div>
+    <div class="chart"><div class="ct">月度预算排期（脉冲式）</div><div class="cs">按科目的月度权重分摊；P3 旺季占比最高</div><div id="chartMonthly"></div></div>
+  </div>
+
+  <h4>预算明细（科目 × 用途 × KPI）</h4>
+  <div class="tbl"><table id="budgetTable"></table></div>
+
+  <h4>月度预算排期表（科目 × 月份）</h4>
+  <div class="tbl"><table id="monthTable" style="font-size:12.3px"></table></div>
+
+  <h4>预算驱动的效果预测</h4>
+  <div class="tbl"><table id="kpiTable"></table></div>
+
+  <div class="callout warn small"><b>调仓规则：</b>① 每月预算会按<b>边际 CPA</b> 调仓，单次调仓不超过该科目的 20%。② <b>机动储备</b> <span class="m" data-x="reserve"></span> 分季度释放，前提是上季度 CPA 和 CTR 都达标（见 ⑧ 季度门槛）。③ 展会和漫展摊位费提前 3 个月锁定。④ 总预算低于 $6,000 时，建议暂停付费广告，把钱集中到达人寄样和 B 端样品包。</div>
+</section>
+
+<!-- ================= ⑧ 测量与控制 ================= -->
+<section class="sec" id="m8">
+  <div class="sec-h"><span class="no">⑧ CONTROL</span><h2>测量与控制</h2></div>
+  <p class="sec-lead">四类控制（年度计划、盈利能力、效率、战略），配合数字测量体系。预算小，所以不做 MMM；用 <b>MER、专属码、购后问卷、开 / 停投放测试</b> 做增量判断。</p>
+
+  <h3>四类控制</h3>
+  <div class="tbl"><table>
+    <tr><th>控制类型</th><th>目的</th><th>方法 / 工具</th><th>频率</th><th>负责人</th></tr>
+    <tr><td>年度计划控制</td><td>检查目标是否达成</td><td>销售分析（收入、订单、种子用户）、营销费用率、MER、B 端漏斗</td><td>月度</td><td>CMO</td></tr>
+    <tr><td>盈利能力控制</td><td>看哪里赚、哪里亏</td><td>按 SKU、市场、渠道（DTC / TikTok Shop / Etsy / B 端）、订单规模分别算贡献毛利</td><td>月度</td><td>CMO + 财务</td></tr>
+    <tr><td>效率控制</td><td>提升投放与销售效率</td><td>CPM、CTR、CPA、ROAS；达人单条 CPV / 转化；样品包转化率；B 端赢单率</td><td>周度</td><td>运营</td></tr>
+    <tr><td>战略控制</td><td>是否抓住最佳机会</td><td>营销审计（G-STIC）、5C 环境扫描（关税、平台费、IP 热度）、品牌健康调研</td><td>季度</td><td>CMO + 管理层</td></tr>
+  </table></div>
+
+  <h3>季度门槛（Stage-Gate）</h3>
+  <div class="grid g4">
+    <div class="card"><h4>G1 · 2027-03 末</h4><p class="small">内容钩子 CTR ≥ 1.0%；100 位创始藏家中 ≥ 40% 发布内容；退货率 &lt; 5%<br><b>通过</b>→ 释放 Q2 付费预算；<b>未通过</b>→ 重拍素材，付费预算转给达人</p></div>
+    <div class="card"><h4>G2 · 2027-06 末</h4><p class="small">混合 CPA ≤ $20；B 端样品包转化率 ≥ 15%；菲律宾 ₱449 价位转化率 ≥ 美国的 60%<br><b>通过</b>→ 上线英国 / 扩大菲律宾；<b>未通过</b>→ 改价或改用贴纸 SKU</p></div>
+    <div class="card"><h4>G3 · 2027-09 末</h4><p class="small">复购率 ≥ 15%；≥ 2 单 B 端试点；BLE 预约 ≥ 5 场会谈<br><b>通过</b>→ 释放旺季储备金；德国 / 泰国试水</p></div>
+    <div class="card"><h4>G4 · 2027-12 末</h4><p class="small">全年 KPI 复盘；≥ 1 份授权 LOI；MER ≥ 1.5<br>→ 形成 2028 年预算申请（建议金额按 MER 与 LTV / CAC 推算）</p></div>
+  </div>
+
+  <h3>数字测量体系与 KPI 字典</h3>
+  <div class="grid g2">
+    <div class="card"><h4>付费媒体归因</h4><ul class="clean small">
+      <li><b>平台归因</b>：TikTok / Meta 后台只用来看趋势；不同平台会重复认领同一订单，<b>不能直接相加</b></li>
+      <li><b>增量测试（小预算版）</b>：两周开 / 两周停的时间对照；菲律宾与泰国做简易地理对照（P3）</li>
+      <li><b>整体效率</b>：MER = 总收入 ÷ 营销费用，不受归因口径影响</li></ul>
+      <h4>免费媒体归因</h4><ul class="clean small">
+      <li>达人专属码 + UTM；购后问卷“你从哪里知道我们？”</li>
+      <li>品牌搜索量（Google Trends “floatory”）、直接访问量的变化</li>
+      <li>口碑：Reddit / TikTok 评论里的品牌提及量与正负面比例；AI 回答抽样（ChatGPT / Perplexity 问“best floating sticker”）</li></ul></div>
+    <div class="tbl" style="margin:0"><table>
+      <tr><th>KPI</th><th>定义（口径）</th><th>目标</th></tr>
+      <tr><td>混合 CAC</td><td>（广告 + 达人 + 寄样）÷ 新客数</td><td>≤ $20</td></tr>
+      <tr><td>MER</td><td>总收入 ÷ 总营销费用</td><td>≥ 1.5（首年）</td></tr>
+      <tr><td>钩子 CTR</td><td>链接点击 ÷ 曝光（Spark Ads）</td><td>≥ 1.0%</td></tr>
+      <tr><td>内容 3 秒留存</td><td>3 秒播放 ÷ 播放</td><td>≥ 40%</td></tr>
+      <tr><td>复购率</td><td>90 天内 ≥ 2 单的客户占比</td><td>≥ 20%</td></tr>
+      <tr><td>NPS</td><td>购后第 14 天调研</td><td>≥ 50</td></tr>
+      <tr><td>样品包转化率</td><td>试点订单 ÷ 寄出样品包</td><td>≥ 20%</td></tr>
+      <tr><td>品牌搜索指数</td><td>Google Trends 品牌词（相对值）</td><td>月环比 ↑</td></tr>
+      <tr><td>正版提及率</td><td>评论里提到 “real / authentic / can't fake” 的比例</td><td>≥ 10%</td></tr>
+    </table></div>
+  </div>
+  <p class="small"><b>数据基础</b>：统一 UTM 规范（source / medium / campaign / creator）、服务器端转化（Shopify + TikTok Events API + Meta CAPI）、订单按国家归属、B 端询盘统一进 CRM（HubSpot 免费版）、KPI 字典统一口径。</p>
+</section>
+
+<!-- ================= ⑨ 测试与迭代 ================= -->
+<section class="sec" id="m9">
+  <div class="sec-h"><span class="no">⑨ TEST</span><h2>测试与迭代：假设 → 测试 → 判定 → 回写</h2></div>
+  <p class="sec-lead">开测前写好通过标准；样本不足视为未判定；不事后改口径。结果每季度回写 ① 目标、③ STP、④ 7T。</p>
+  <div class="tbl"><table>
+    <tr><th>#</th><th>假设</th><th>验证方法</th><th>样本 / 周期</th><th>通过标准</th><th>未通过时的动作</th><th>类型</th></tr>
+    <tr><td>H1</td><td>浮空效果能在 2D 短视频里被“看见”并带来点击</td><td>3 种拍法（微距手指穿透 / 对比光栅 / 冰箱墙）A/B</td><td>每组 ≥ 20,000 曝光，2 周</td><td>CTR ≥ 1.0%，3 秒留存 ≥ 40%</td><td>改拍法（加实物参照、慢动作），试直播</td><td><span class="pill h">硬门槛</span></td></tr>
+    <tr><td>H2</td><td>$12.90 比 $9.90 带来更高的单客贡献毛利</td><td>价格梯度测试（官网分流）</td><td>每组 ≥ 1,000 访客</td><td>$12.90 组转化率 ≥ $9.90 组的 75%</td><td>主力价下调至 $10.90，加 3 件装</td><td><span class="pill">方向性</span></td></tr>
+    <tr><td>H3</td><td>原创 / 公版图案的销量不低于联名款的 60%</td><td>同期上新、同等曝光</td><td>每类 ≥ 4 款，30 天</td><td>售罄率比值 ≥ 0.6</td><td>提高联名占比，提前谈授权</td><td><span class="pill">方向性</span></td></tr>
+    <tr><td>H4</td><td>“防伪 / 正版”信息比“魔法”信息转化更好</td><td>广告文案 A/B</td><td>每组 ≥ 1,500 点击</td><td>CVR 提升 ≥ 15%</td><td>以“魔法”为主信息，防伪作次要</td><td><span class="pill">方向性</span></td></tr>
+    <tr><td>H5</td><td>B 端客户愿为浮空定制付溢价</td><td>样品包 + 阶梯报价</td><td><span data-kpi="b2bkits"></span> 套，按季度判定</td><td>转化率 ≥ 20%，单价 ≥ $1.0 / 片</td><td>改做“浮空防伪贴”方案，转向 IP 方</td><td><span class="pill h">硬门槛</span></td></tr>
+    <tr><td>H6</td><td>菲律宾可以接受 ₱449 的高端价位</td><td>TikTok Shop 菲律宾双价位上新</td><td>各 ≥ 500 访客</td><td>转化率 ≥ 1.0%</td><td>主推 ₱179 贴纸 + ₱199 卡牌</td><td><span class="pill">方向性</span></td></tr>
+    <tr><td>H7</td><td>盲包卡牌能带来复购</td><td>卡牌系列 vs 单品冰箱贴</td><td>首批购买者 ≥ 150 人，90 天</td><td>卡牌买家复购率 ≥ 冰箱贴买家的 1.5 倍</td><td>卡牌改为成套直售</td><td><span class="pill">方向性</span></td></tr>
+  </table></div>
+  <div class="callout ok small"><b>闭环：</b>精益创业“构建 → 测量 → 学习”。通过 → 加预算或扩品；未通过 → 修改信息、产品、价格或渠道，或推迟节点。每季度更新一版计划（v1.1 / v1.2 …）。</div>
+</section>
+
+<!-- ================= G-STIC ================= -->
+<section class="sec" id="gstic">
+  <div class="sec-h"><span class="no">G-STIC</span><h2>营销计划一页纸</h2></div>
+  <div class="grid g2">
+    <div class="card"><h4>G 目标</h4><p class="small"><b>重点</b>：验证 C 端模式 + 拿下 B 端试点。<b>基准</b>：从零起步。<b>2027 年底</b>：付费种子用户 <span class="kv" data-kpi="customers"></span>，社群 <span class="kv" data-kpi="community"></span>，B 端试点 <span class="kv" data-kpi="pilots"></span>，收入 <span class="kv" data-kpi="revenue"></span>，授权 LOI ≥ 1。</p></div>
+    <div class="card"><h4>S 战略</h4><p class="small"><b>目标市场</b>：主目标是 Z 世代动漫 / IP 收藏粉（美、英、菲）；次目标是旅行冰箱贴收藏者（经 B 端景区触达）；B 端为博物馆、景区、IP 方、企业礼品。<b>价值主张</b>：会浮起来的正版收藏，无需电源、无法仿制。</p></div>
+    <div class="card"><h4>T 战术（7T）</h4><p class="small"><b>产品</b>：浮空冰箱贴 / 卡牌 / 贴纸 / Genesis 套装 / B 端定制。<b>服务</b>：Float or Free、序列号验真。<b>品牌</b>：FLOATORY 品牌屋。<b>价格</b>：$12.90 / $6.90 / $5.90，B 端阶梯价。<b>激励</b>：创始藏家、集卡、推荐。<b>沟通</b>：内容和达人优先、Spark Ads 放大、PR、ABM。<b>分销</b>：DTC + TikTok Shop + Etsy + B 端选择性分销。</p></div>
+    <div class="card"><h4>I 执行</h4><p class="small">P0 准备（2026-12 至 2027-02）→ P1 软启动（3–5 月，美国 + 菲律宾）→ P2 正式发布（6–8 月，英国）→ P3 旺季（9–12 月）。预算 <span class="m" data-x="total"></span>：内容 <span class="m" data-x="content"></span>、达人 <span class="m" data-x="creator"></span>、广告 <span class="m" data-x="ads"></span>、样品 <span class="m" data-x="samples"></span>、社群 <span class="m" data-x="community"></span>、工具 <span class="m" data-x="tools"></span>、合规 <span class="m" data-x="legal"></span>、储备 <span class="m" data-x="reserve"></span>。</p></div>
+    <div class="card" style="grid-column:1/-1"><h4>C 控制</h4><p class="small">季度门槛 G1–G4；KPI 字典（CAC、MER、CTR、复购、NPS、样品包转化率）；四类控制；环境监测：关税与小额豁免、平台费率、IP 热度（Trends）、中东旅游恢复、欧盟 GPSR 执法、竞品是否推出“浮空”或高端光栅产品。</p></div>
+  </div>
+</section>
+
+<!-- ================= 附录 ================= -->
+<section class="sec" id="appx">
+  <div class="sec-h"><span class="no">APPENDIX</span><h2>附录：数据来源、缺口清单与方法说明</h2></div>
+
+  <h3>A. 数据采集方法</h3>
+  <div class="grid g4">
+    <div class="kpi"><div class="v">260</div><div class="l">登记来源条目</div><div class="s">北美 / 欧洲批次 178 + 中东 / 东南亚批次 82</div></div>
+    <div class="kpi"><div class="v">80</div><div class="l">抓取任务</div><div class="s">72 个计划任务（成功 66）+ 8 个补抓</div></div>
+    <div class="kpi"><div class="v">6</div><div class="l">国家</div><div class="s">US、GB、DE、AE、TH、PH</div></div>
+    <div class="kpi"><div class="v">&lt;$1</div><div class="l">数据费用</div><div class="s">Serper 21 次、Tavily 18 次、Apify $0.57、Firecrawl 约 12 积分、Census 1 次</div></div>
+  </div>
+  <p class="small">工具：crawler 技能 <b>高级查询</b>（advanced tier），抓取日期 2026-11-20。来源分层：<b>A 权威二手报告</b>（行业协会、政府、咨询 / 研究机构、新闻），<b>B 公开行为数据</b>（Google Trends、Reddit / TikTok / YouTube 公开内容、新闻），<b>C 竞品公开数据</b>（Google 搜索排名、Google Shopping、Meta 广告库、竞品官网）。每条结论尽量用两类来源互相印证；只有一类来源的，在正文中标注。社媒样本只保留文本、时间和互动数，不保存用户名、ID 等个人信息。研究机构市场规模数字多为付费报告的公开摘要（二手引用），各家口径不同，正文已标注冲突。</p>
+
+  <h3>B. 数据来源登记（按编号）</h3>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 8px" id="srcFilter">
+    <button class="btn light" data-f="all">全部</button><button class="btn light" data-f="A">A 权威报告</button><button class="btn light" data-f="B">B 行为数据</button><button class="btn light" data-f="C">C 竞品数据</button><button class="btn light" data-f="I">I 内部资料</button>
+  </div>
+  <div class="tbl"><table class="src-table" id="srcTable"></table></div>
+
+  <h3>C. 缺口清单与建议去向</h3>
+  <div class="tbl"><table>
+    <tr><th>缺口</th><th>原因</th><th>建议去向</th><th>截止</th></tr>
+    <tr><td>单片成本、产能、起订量、良率、交期</td><td>公司内部数据，公开渠道无法获取</td><td>公司数据收集表（研发 / 生产），用于修正单客经济</td><td>P0（2026-12）</td></tr>
+    <tr><td>浮空膜耐候性（UV、防水、磁吸后的成像稳定性）</td><td>需要实测</td><td>第三方检测（SGS / Intertek）</td><td>P0</td></tr>
+    <tr><td>Etsy、Shopee、Lazada、noon 的销量与评价</td><td>crawler 未接入这些平台</td><td>人工记录各平台前 20 名商品的价格与评价数</td><td>P1</td></tr>
+    <tr><td>TikTok 商业内容库广告</td><td>页面读取失败（2,200 字符空页）</td><td>投放团队用 TikTok Creative Center 账户人工查看</td><td>P1</td></tr>
+    <tr><td>部分 TikTok UGC（“lenticular anime”美国、德国）</td><td>Apify 本周期额度用尽</td><td>下个计费周期补抓，或人工浏览</td><td>P1</td></tr>
+    <tr><td>竞品官网价格（Pop Mart、Hot Topic、Crunchyroll Store、flicksticker、dirava、hookedonhype）</td><td>站点拦截（404 / 429 / 验证页）</td><td>人工用浏览器记录；已用 Google Shopping 价格替代</td><td>P1</td></tr>
+    <tr><td>泰国价格与新闻样本</td><td>泰语查询返回少（Shopping 只有 1 条、新闻为空）</td><td>用英文 / 泰文混合关键词补抓，或在 Shopee TH 人工记录</td><td>P3 前</td></tr>
+    <tr><td>沙特市场</td><td>本轮限 6 国，未覆盖</td><td>2028 年中东 C 端进入前补抓</td><td>2027 Q4</td></tr>
+    <tr><td>支付意愿、价格弹性、人群规模</td><td>需要一手调研</td><td>⑨ H2 / H6 软启动测试 + 小样本问卷（Discord）</td><td>P1–P2</td></tr>
+    <tr><td>Meta 受众规模、关键词搜索量</td><td>需要广告账户</td><td>投放团队用自有账户（Ads Manager、Keyword Planner）获取</td><td>P0</td></tr>
+  </table></div>
+
+  <h3>D. 本报告引用的公司内部资料</h3>
+  <ul class="clean small">
+    <li><b>I-1</b>《可交互浮空成像技术》汇报材料，浙江徕智家未来科技有限公司，2026-07-14（团队、专利、微纳无源空中成像技术参数、应用领域、联合研发项目、财务预测）</li>
+    <li><b>I-2</b> 产品演示视频 2.mp4（工行红包上的浮空“福”字贴片演示）</li>
+    <li><b>I-3</b>《营销计划框架（优化版）：9 个模块与闭环（C 端 / B 端）》v6，2026-11-12，本报告的结构依据</li>
+  </ul>
+  <p class="muted">理论依据：科特勒、凯勒、切尔内夫《营销管理》（G-STIC、7T、5C）；Webster &amp; Wind（1972）；Bonoma &amp; Shapiro（1983）；Barney（1991）VRIO；Parasuraman 等（1988）SERVQUAL；Keller CBBE；科特勒《营销 4.0》5A；Sharp（2010）；Binet &amp; Field（2013）；Johanson &amp; Vahlne（1977）；Rust、Lemon &amp; Zeithaml（2004）；Ries（2011）。</p>
+</section>
+
+<div class="foot">© 2026 浙江徕智家未来科技有限公司 · CMO 办公室 · 计划草案 v1.0 · 本文件为单一 HTML，可离线打开；预算调整只在本地浏览器中计算，不上传任何数据。<br>声明：市场规模类数字多来自研究机构的公开摘要，口径不一，仅供方向判断；单客经济与预测模型含假设，需用 P0 公司数据和 P1 测试结果修正。</div>
+</div><!-- /wrap -->
+</main>
+<script>
+(function(){
+"use strict";
+/* ================= 数据 ================= */
+var ITEMS=[
+ {k:"content",  n:"内容与创意制作", d:"微距浮空视频模板、产品摄影、品牌视觉、包装设计", pct:12, kpi:"每周 5 条短视频；3 套拍法模板", w:[12,12,10,8,6,6,8,6,8,8,6,6,4]},
+ {k:"creator",  n:"达人种草",       d:"nano / micro 付费合作 60%；联盟佣金与内容加热 40%", pct:28, kpi:"付费达人数、UGC 条数、专属码订单", w:[0,2,4,8,9,8,10,10,10,10,10,11,8]},
+ {k:"ads",      n:"付费广告",       d:"TikTok Spark Ads 60%；Meta Advantage+ / 再营销 40%", pct:22, kpi:"CTR ≥ 1.0%，CPA ≤ $20", w:[0,0,0,6,7,7,9,9,10,10,10,18,14]},
+ {k:"samples",  n:"样品与寄送",     d:"达人寄样 50%；B 端样品包（含国际快递）50%", pct:10, kpi:"寄样达人数、B 端样品包数", w:[5,8,10,12,10,8,8,8,10,8,6,4,3]},
+ {k:"community",n:"社群与活动",     d:"Discord 运营、抽奖、漫展合租摊位（Anime Expo / MCM / MEFCC）", pct:8, kpi:"社群人数、活动线索", w:[2,4,4,8,8,6,14,10,10,12,8,8,6]},
+ {k:"tools",    n:"平台与工具",     d:"Shopify、Klaviyo、剪辑 / 设计工具、社媒聆听、HubSpot", pct:6, kpi:"数据看板按时上线", w:[12,8,8,8,8,8,8,8,8,8,6,6,4]},
+ {k:"legal",    n:"商标与合规",     d:"商标检索与注册 55%；GPSR 代表、第三方检测 45%", pct:8, kpi:"5 地商标申请；欧盟 / 英国责任人就位", w:[30,25,10,5,5,10,5,5,5,0,0,0,0]},
+ {k:"reserve",  n:"机动储备",       d:"按季度门槛释放，追投已验证的渠道或旺季加码", pct:6, kpi:"仅在门槛通过后使用", w:[0,0,0,0,0,10,15,10,10,15,15,15,10]}
+];
+var DEFAULT_PCT=ITEMS.map(function(i){return i.pct;});
+var COLORS=["#5b5bf7","#8b5cf6","#18c3d6","#ff5c8a","#f5b942","#16a36b","#e8912d","#9aa3c0"];
+var REGIONS=[
+ {k:"NA",n:"北美（美国）",pct:45},{k:"EU",n:"欧洲（英国 → 德国）",pct:20},{k:"SEA",n:"东南亚（菲律宾 → 泰国）",pct:20},{k:"ME",n:"中东（阿联酋）",pct:10},{k:"GL",n:"全球共用（品牌 / 工具 / 合规）",pct:5}
+];
+var DEFAULT_REG=REGIONS.map(function(r){return r.pct;});
+var ASSUME=[
+ {k:"cpmTT",n:"TikTok CPM（$）",v:7},{k:"cpmMeta",n:"Meta CPM（$）",v:13},{k:"ctrTT",n:"TikTok CTR（%）",v:1.0},{k:"ctrMeta",n:"Meta CTR（%）",v:1.5},
+ {k:"cvr",n:"落地页转化率（%）",v:1.5},{k:"aov",n:"客单价 AOV（$）",v:26},{k:"creatorFee",n:"达人单条均价（$）",v:150},{k:"views",n:"达人单条均播放",v:8000},
+ {k:"creatorConv",n:"达人播放 → 订单（%）",v:0.03},{k:"ownedViews",n:"自有内容 $1 带来播放",v:150},{k:"b2bConv",n:"样品包 → 试点（%）",v:20},{k:"b2bAvg",n:"B 端试点客单（$）",v:4000}
+];
+var MONTHS=["2026-12","2027-01","2027-02","2027-03","2027-04","2027-05","2027-06","2027-07","2027-08","2027-09","2027-10","2027-11","2027-12"];
+var PHASE=["P0","P0","P0","P1","P1","P1","P2","P2","P2","P3","P3","P3","P3"];
+var PHASE_COLOR={P0:"#9aa3c0",P1:"#18c3d6",P2:"#5b5bf7",P3:"#ff5c8a"};
+var CAL=[
+ ["准备：品牌与产品","Genesis 样品、首批 12 款","商标检索；品牌视觉；Shopify 搭建；样品打样与检测","—"],
+ ["准备：内容与种子招募","Genesis 套装","微距拍法模板；招募 100 位创始藏家；B 端 ICP 名单 60 家","美国 / 菲律宾"],
+ ["预热：情人节","冰箱贴（爱心主题）","情人节（2/14）；斋月开始（约 2/8），中东 B 端礼盒提案","美国 / 阿联酋"],
+ ["软启动：Founding 100","Genesis 套装、冰箱贴","官网 + TikTok Shop 美国 / 菲律宾上线；开斋节（约 3/10）；G1 门槛","美国 / 菲律宾"],
+ ["软启动：内容放大","卡牌盲包第 1 季","Spark Ads 起量；宋干节（4/13–15）泰国内容测试","美国 / 菲律宾"],
+ ["授权展 & 毕业季","冰箱贴、贴纸","Licensing Expo（拉斯维加斯）观众身份参会；MCM London（5 月下旬）；母亲节","美国 / 英国"],
+ ["正式发布：英国上线","全系列","TikTok Shop UK + Etsy；大英博物馆等 A 级 ABM；G2 门槛","英国 / 美国"],
+ ["漫展季","漫展限定款","Anime Expo（7 月初，洛杉矶）合租摊位；SDCC（7 月下旬）；Prime Day 竞品监测","美国"],
+ ["返校与收藏季","卡牌第 2 季","收藏搜索 +27%；返校礼包；菲律宾“ber months”预热","美国 / 菲律宾"],
+ ["旺季启动","贴纸、冰箱贴","9.9 大促；MEFCC（阿布扎比）；G3 门槛；德国 / 泰国试水","菲律宾 / 阿联酋 / 美国"],
+ ["授权展 & 万圣节","万圣节限定","BLE 伦敦（10 月）：授权会谈；NYCC；10.10","英国 / 美国"],
+ ["黑五网一","礼盒、3 件装","11.11；黑五（11/26）、网一：全年唯一全站折扣（≤ 20%）","全部"],
+ ["圣诞与复盘","圣诞限定、礼卡","圣诞送礼；12.12；迪拜购物节；G4 复盘 → 2028 计划","全部"]
+];
+var TRADE={years:["2024","2025","2026 年 1–9 月"],all:[118.87,121.32,105.45],cn:[56.56,51.87,42.95]};
+var STICKER={labels:["2021","2022","2023","2024","2025","2026"],series:[
+ {n:"美国 sticker",c:"#5b5bf7",d:[33.4,37.8,38.9,43.4,48.2,61.7]},
+ {n:"德国 Aufkleber",c:"#18c3d6",d:[71.9,76.9,79.2,79.7,83.7,82.1]},
+ {n:"菲律宾 sticker",c:"#ff5c8a",d:[22.4,24.6,25.4,25.6,28.3,33.7]},
+ {n:"英国 sticker",c:"#f5b942",d:[13.3,15.4,16.9,19.6,20.9,30.5]}]};
+var LABUBU={labels:["2023","2024","2025","2026"],series:[
+ {n:"泰国",c:"#ff5c8a",d:[0.5,17.5,7.3,2.1]},{n:"阿联酋",c:"#5b5bf7",d:[0,2.0,24.7,2.2]},{n:"菲律宾",c:"#18c3d6",d:[0,13.1,5.8,2.2]}]};
+var PRICE=[
+ {n:"美国·正版 3D 泡棉冰箱贴",p:[7.5,10.99,11.99],c:"#5b5bf7"},
+ {n:"美国·光栅动漫贴纸",p:[6.0,7.99,9.99],c:"#8b5cf6"},
+ {n:"美国·3D 光栅冰箱贴",p:[4.99,5.90,6.57],c:"#8b5cf6"},
+ {n:"英国·动漫冰箱贴",p:[6.49,9.09,12.99],c:"#18c3d6"},
+ {n:"德国·动漫冰箱贴",p:[6.79,8.81,20.64],c:"#18c3d6"},
+ {n:"阿联酋·动漫冰箱贴",p:[4.99,7.99,12.0],c:"#f5b942"},
+ {n:"阿联酋·迪拜纪念品冰箱贴",p:[2.72,5.98,8.17],c:"#f5b942"},
+ {n:"菲律宾·动漫冰箱贴（平台）",p:[0.24,0.43,3.72],c:"#ff5c8a"},
+ {n:"★ FLOATORY 浮空冰箱贴（建议价）",p:[12.9,12.9,12.9],c:"#16a36b"}];
+var SOURCES=[
+ ["A-S142","A","US","GlobeNewswire / Licensing International","Licensing International's 2026 Global Study Shows Licensing Industry's Continued Growth, Reaching $389.8 Billion in Sales","2026-05-19","https://www.globenewswire.com/news-release/2026/05/19/3297905/0/en/licensing-international-s-2026-global-study-shows-licensing-industry-s-continued-growth-reaching-389-8-billion-in-sales.html","①②"],
+ ["A-S4","A","US","Business Wire / Licensing International","Licensing International's 2025 Global Study Shows Licensing Industry Reached $369.6 Billion","2025-05-20","https://www.businesswire.com/news/home/20250520191636/en/Licensing-Internationals-2025-Global-Study-Shows-Licensing-Industry-Reached-%24369.6-Billion","①"],
+ ["A-S2","A","US","Licensing International","Executive Summary of 2024 Global Licensing Industry Study（2023 年 $356.5B）","2024","https://licensinginternational.org/news/licensing-international-releases-executive-summary-of-2024-global-licensing-industry-study","①"],
+ ["A-S91","A","US","Growth Market Reports（二手）","Character Licensing Market 2026: Size, Share & Royalty Rates","2026","https://growthmarketreports.com/report/character-licensing-market","①④"],
+ ["A-S50","A","US","Grand View Research（摘要）","Anime Merchandising Market Size, Share Report, 2026-2033","2026","https://www.grandviewresearch.com/industry-analysis/anime-merchandising-market-report","①"],
+ ["A-S11","A","US","Grand View Research（摘要）","North America Anime Merchandising Market Outlook, 2033","2026","https://www.grandviewresearch.com/horizon/outlook/anime-merchandising-market/north-america","①"],
+ ["A-S15","A","US","Grand View Research（摘要）","U.S. Anime Merchandising Market Size, Share | Report, 2030","2025","https://www.grandviewresearch.com/industry-analysis/us-anime-merchandising-market-report","①②"],
+ ["A-S9","A","US","Market Intelo（摘要）","Anime Merchandise Market Research Report 2034（口径冲突参照）","2026","https://marketintelo.com/report/anime-merchandise-market","①"],
+ ["A-S18","A","GB","Strategic Revenue Insights（摘要）","Fridge Magnets Market Projected to Scale to $1.38 Billion by 2035","2026","https://www.strategicrevenueinsights.com/industry/fridge-magnets-market","①"],
+ ["A-S21","A","GB","TechSci Research（摘要）","Fridge Magnets Market Size, Share, and Forecast 2031","2026","https://www.techsciresearch.com/report/fridge-magnets-market/20323.html","①"],
+ ["A-S22","A","GB","Verified Market Research（摘要）","Fridge Magnets Market Report: Size, Growth, Trends & Forecast (2025–2033)","2026","https://www.verifiedmarketresearch.com/product/fridge-magnets-market","①"],
+ ["A-S25","A","US","U.S. Census Bureau（API）","International Trade – Imports HS 850519（非金属永磁体）× 中国（5700）及全部国家，2024-01 至 2026-09","2026-11-20","https://api.census.gov/data/timeseries/intltrade/imports/hs","①②"],
+ ["A-S30","B","US","License Global（引 Circana）","U.S. Toy Sales Rise 20% as Collectibles and Fandom Drive Growth, Circana Reports","2026-11-12","https://www.licenseglobal.com/toys-games/u-s-toy-sales-rise-20-as-collectibles-and-fandom-drive-growth-circana-reports","①"],
+ ["A-S46","A","US","CBR（引 Crunchyroll 调研）","New Crunchyroll Data Report Reveals Anime's 'Pop Culture Chokehold' on Gen Z & Millennials","2025","https://www.cbr.com/crunchyroll-anime-gen-z-millennial-pop-culture-chokehold","①②"],
+ ["A-S48","A","US","Brand report（PDF）","ANIME: A Growing Opportunity for Brands","2025","https://assets-eu-01.kc-usercontent.com/7bf8ef96-9447-0161-1923-3ac6929eb20f/c8e93927-08e1-4d08-8b4d-d0582abd9304/dentsu_Anime%20-%20A%20Growing%20Opportunity%20for%20Brands%20%282025%20Global%20Research%20Report%29.pdf?pubDate=20250704","①"],
+ ["A-S51","A","US","Verve Insights","What Collectible Search Trends Reveal About Gen Z, Millennials & Boomers","2025","https://investors.verve.com/insights/verve-insights-what-collectible-search-trends-reveal-about-gen-z-millennials-gen-x","②④"],
+ ["A-S64","B","US","The Business Times","Pop Mart's US sales fall 45% as it struggles to find next Labubu","2026-04-30","https://www.businesstimes.com.sg/companies-markets/consumer-healthcare/pop-marts-us-sales-fall-45-it-struggles-find-next-labubu","①"],
+ ["A-S146","B","US","朝日新闻 Asahi Shimbun","Fake 3D bubble stickers account for 40% of goods seized at customs","2026-10-30","https://www.asahi.com/ajw/articles/16885793","摘要②④"],
+ ["A-S148","B","US","ScreenRant","Don't Mess With Naruto. If You Do, You May Lose a $5 Million Lawsuit","2025-05-30","https://news.google.com/rss/articles/CBMiggFBVV95cUxNdzN6SC0zNzMzOVpOYkFPTUZTSDhsQmJfM3JQX1NXSkNkaXUzRWJRamRkOVozejNPVmxTT1VoNXk1bm42RU93UkFDdEtzekFLUEVnQ3Y1LWdUNHFwX3Z2M21aUDF6bU9lVGdfZFJKOTVKUDZQZjlGLUt6aUJOMlE4Mnd3?oc=5","④"],
+ ["A-S149","B","US","Anime News Network","How To Spot An Anime Bootleg","2025-12-15","https://www.animenewsnetwork.com/feature/2025-12-15/how-to-spot-an-anime-bootleg/.231679","②"],
+ ["A-S156","B","GB","The Toy Book","Crunchyroll Brings Anime-zing Lineup to Brand Licensing Europe 2026","2026-09-03","https://toybook.com/crunchyroll-brand-licensing-europe-2026/","②"],
+ ["A-S154","B","GB","License Global","Trends from Brand Licensing Europe 2026","2026-10-07","https://www.licenseglobal.com/brand-licensing-europe/trends-from-brand-licensing-europe-2026","⑦"],
+ ["A-S34","B","US","The Manila Times","Alliance Entertainment and JAKKS Pacific Team Up to Take Anime and VTuber Collectibles Further Across North America","2026-11-10","https://news.google.com/rss/articles/CBMimAJBVV95cUxPT0xDdlA0WFQyQ2JYSmNUV0JhZV9nVGxmNlBramFwenJodE13aGpVTkh6S3otM1hvNXBBbmk0Rk85YUg3bVhtdnI4SFdWMGZVRkNZVlNxbFNLZFo3Z1dlY1hyWEFFeF9zRVhNS2ZsUl9HWnJMdDhJSkN4VlBuSllaSU5OcDBtV2UwZHBZNHE4enNaNUpoTjFMb0FuZEx2QVFVVzRFZXh6Q0xycEpOMldWalI0ZlBQUDBsZDVhTERvVEQ4U055T29XVWlCTzhPUUtNS3JsZFhtMXRNNXlNSWR5Tldha0IxLVZjTndQS3NkbDdNVkdaVUI2bDU0ZEttTmRYZWNwUTFJeENxZDZnUjJnUjFEazlubEVm0gGeAkFVX3lxTE5WdHdsLUhxM1dDazJNa2psd3lidkxEWWxic19IVnRfR2k2UG5qd296NGZNeDFOWUpfTmhLbDFraWRRZFMwSWdSU25Fdk5GYkR2cnI5bGtTSGkyRVc0V0VJSjlQUVJ1MGllMVotRG11Z3BoVFZqWWpDakZIVVNTVUFjR2h5aUdMZTY5X1F0cXBMN3RzemNmc1ZGeHMwU0V0eGNOMDh0ZHhWaW9zOTZxUFFnWG95c044Y2x4N0o5XzY2c2VfY1RXUE1JX3U2Z1lQVjkwMC1LNHBCUmJzQ3JDT3Z4UGRiZjVDQno4QzF6b3QxNzZGRW5zb3ZDMTRhbVUzVzBhMUZyYm9waGpWLUxPTFJ2V2lxZGxKdF9KX25xSlE?oc=5","②"],
+ ["A-S26","B","US","Google Trends","fridge magnet / anime merch / lenticular / holographic sticker / sticker（US，5 年，周度 + 相关查询）","2026-11-20","https://trends.google.com/trends/explore?geo=US&date=today%205-y","①②"],
+ ["A-S70","B","GB","Google Trends","fridge magnet / anime merch / lenticular / sticker（GB，5 年）","2026-11-20","https://trends.google.com/trends/explore?geo=GB&date=today%205-y","②"],
+ ["A-S74","B","DE","Google Trends","Kühlschrankmagnet / Anime Merch / Aufkleber / 3D Sticker（DE，5 年）","2026-11-20","https://trends.google.com/trends/explore?geo=DE&date=today%205-y","②"],
+ ["A-S54","B","US","Reddit + TikTok（经 Apify）","社媒检索 “fridge magnet collection”：50 条（Reddit 25、TikTok 25）","2026-11-20","https://www.tiktok.com/tag/magnetcollection","②⑤"],
+ ["A-S99","B","US","Reddit（经 Apify）","社媒检索 “bootleg anime merch how to tell”：15 帖","2026-11-20","https://www.reddit.com/","②"],
+ ["X-S1","B","US","Reddit（经 Apify）","社媒检索 “lenticular anime”：19 帖（含官方光栅卡 1,443 赞）","2026-11-20","https://www.reddit.com/","摘要"],
+ ["X-S2","B","DE","YouTube（经 Apify）","社媒检索 “Anime Merch Haul”（DE）：12 条视频","2026-11-20","https://www.youtube.com/","②"],
+ ["A-S136","C","US","Google Shopping（Serper）","“3d anime fridge magnet”“lenticular anime sticker”：各 40 个商品价格","2026-11-20","https://shopping.google.com/","②④"],
+ ["A-S56","C","US","Google Shopping（Serper）","“3d lenticular fridge magnet”：40 个商品价格","2026-11-20","https://shopping.google.com/","②④"],
+ ["A-S55","C","GB","Google Shopping（Serper）","“anime fridge magnet”（UK）：40 个商品价格","2026-11-20","https://shopping.google.com/","④"],
+ ["A-S57","C","DE","Google Shopping（Serper）","“3D Kühlschrankmagnet”“anime kühlschrankmagnet”（DE）：各 40 个商品价格","2026-11-20","https://shopping.google.com/","④"],
+ ["A-S60","C","US","Google 搜索（Serper）","“3d anime fridge magnet”“lenticular anime sticker”自然排名与竞品域名","2026-11-20","https://www.google.com/","②"],
+ ["A-S72","C","US","Meta 广告库（经 Apify）","关键词 “fridge magnet”（US）：30 条在投广告","2026-11-20","https://www.facebook.com/ads/library/","②④"],
+ ["A-S73","C","US","Meta 广告库（经 Apify）","关键词 “anime merch”（US）：30 条在投广告","2026-11-20","https://www.facebook.com/ads/library/","②④"],
+ ["A-S71","C","GB","Meta 广告库（经 Apify）","关键词 “anime merch”（GB）：20 条在投广告","2026-11-20","https://www.facebook.com/ads/library/","②"],
+ ["A-S121","A","US","Triple Whale","TikTok Ads Benchmarks by Industry (2025)","2025","https://www.triplewhale.com/blog/tiktok-benchmarks","①⑦"],
+ ["A-S122","A","US","UpROAS","TikTok Ads Benchmarks 2026: CPM, CPC, CTR, CVR","2026","https://www.uproas.io/blog/tiktok-ads-benchmark","①"],
+ ["A-S123","A","US","Quimby Digital","Current CPM 2026: $15 Meta, $4 TikTok, $34 LinkedIn","2026","https://quimbydigital.com/current-cpm","⑦"],
+ ["A-S125","A","US","Focus Digital","Average TikTok Ads CTR and CPM by Industry: 2026 Benchmarks","2026","https://focus-digital.co/average-tiktok-ads-ctr-and-cpm-by-industry","④"],
+ ["A-S132","A","US","Kolect","Micro influencer rates 2026: nano and micro pricing","2026","https://www.kolect.ai/guides/micro-influencer-rates","④⑦"],
+ ["A-S135","A","US","5WPR（引 Meltwater / Collabstr）","How Much Does Influencer Marketing Cost in 2026?","2026","https://www.5wpr.com/new/influencer-marketing-cost","④"],
+ ["A-S153","A","US","U.S. CPSC","Magnets Business Guidance（16 CFR Part 1262）","2026","https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Magnets","⑥"],
+ ["A-S78","A","US","eCFR","16 CFR Part 1262 – Safety Standard for Magnets","2026","https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1262","⑥"],
+ ["A-S86","A","DE","EU Compliance Partner","GPSR EU Responsible Person Service（$500 / 年起）","2025","https://eucompliancepartner.com/amazon-gpsr-eu-responsible-person","⑥"],
+ ["A-S87","A","DE","Complir（引欧盟委员会 Safety Gate）","GPSR Explained: EU General Product Safety Regulation","2026","https://www.complir.io/resources/guides/gpsr-compliance-guide-product-companies","②⑥"],
+ ["A-S93","A","US","Graphic Artists Guild","License It（版税 3–15%）","—","https://graphicartistsguild.org/license-it","④"],
+ ["A-S94","A","US","Pete Canalichio（Medium）","Tilt the Deal in Your Favor — Royalty and Payment Terms","—","https://medium.com/@PeteCanalichio/licensing-contract-royalty-and-payment-terms-57c0288e22e","④"],
+ ["A-S95","A","US","David Koehser 律师事务所","The Basics of a Merchandise License Agreement（保底 50–75%）","—","http://www.dklex.com/the-basics-of-a-merchandise-license-agreement.html","②④"],
+ ["B-S8","A","TH","China Daily","Pop Mart posts revenue, profit jump in 2025","2026-04-09","https://www.chinadaily.com.cn/a/202604/09/WS69d70204a310d6866eb42647.html","②"],
+ ["B-S1","A","TH","China Toy Expo","Pop Mart's Growth Strategy to Reach 20 Billion RMB（东南亚 2024 年 +619%）","2025","https://www.china-toy-expo.com/en/media_center/17110","①"],
+ ["B-S4","A","TH","iChongqing","Pop Mart Hits Record 2025 Revenue, but Share Slump Raises Concerns","2026-03-30","https://www.ichongqing.info/2026/03/30/pop-mart-hits-record-2025-revenue-but-share-slump-raises-concerns-over-labubu-reliance","①"],
+ ["B-S12","A","AE","Ken Research（摘要）","GCC Pop Culture Merchandise & Collectibles Retail Market（$1.2B，CAGR 16.75%）","2025","https://www.kenresearch.com/gcc-pop-culture-merchandise-and-collectibles-retail-market","①"],
+ ["B-S9","A","AE","Ken Research（摘要）","GCC Collectibles Market Share, Companies & Trends Report 2025-2031","2025","https://www.kenresearch.com/gcc-collectibles-market","①"],
+ ["B-S11","A","AE","LinkedIn Pulse（二手）","UAE Toys & Games Market Hits $449M","2025","https://www.linkedin.com/pulse/uae-toys-games-market-hits-449m-breaking-down-2025-growth-21qcc","①"],
+ ["B-S3","A","TH","IMARC（摘要）","Thailand Toys Market Size（$480.9M，2025）","2026","https://www.imarcgroup.com/thailand-toys-market","①"],
+ ["B-S73","A","AE","Dubai Media Office（政府）","Dubai's tourism industry achieves third successive record-breaking year（19.59M）","2026-02-09","https://www.mediaoffice.ae/en/news/2026/february/09-02/dubais-tourism-industry-achieves-third-successive-record-breaking-year","①"],
+ ["B-S78","A","AE","Tourism Analytics（引 Dubai DET）","Dubai received 44.4% fewer international visitors through August 2026","2026-09-28","https://tourismanalytics.com/expertinsights/dubai-received-444-fewer-international-visitors-through-august-2026-than-through-the-same-eight-months-of-2025","①②"],
+ ["B-S54","A","TH","TKDami","TikTok Shop Southeast Asia Creator Marketing: Rates & Rules","2026","https://www.tkdami.com/blog/8337","②⑥"],
+ ["B-S55","A","TH","Cube Asia","TikTok Shop Take-Rate Tracker 2026","2026","https://cube.asia/tiktok-shop-take-rate-tracker","②④"],
+ ["B-S60","A","TH","OneCart","How to Sell on TikTok Shop 2026: Fees, Setup & Multichannel（含美国小额豁免取消）","2026","https://www.getonecart.com/how-to-sell-on-tiktok-shop","①②④⑥"],
+ ["B-S48","A","PH","Stackmatix","TikTok Ads Cost by Country in 2026","2026","https://www.stackmatix.com/blog/tiktok-ads-cost-by-country-2026","⑦"],
+ ["B-S49","A","PH","AdBacklog","TikTok Ads Benchmarks Per Industry (2025)（Spark Ads CTR 3%+）","2025","https://adbacklog.com/blog/tiktok-ads-benchmarks-per-industry-2025","④"],
+ ["B-S22","A","PH","CBR","1 in 10 Anime Fans Spend Over $300 a Month, New Survey Finds","2026","https://www.cbr.com/anime-fan-spending-behavior-survey-2026","②"],
+ ["B-S42","A","AE","SGS","Navigating UAE Product Conformity: Understanding ECAS and EQM Certification","2024-06","https://www.sgs.com/en-us/news/2024/06/pca-2024-q2-navigating-uae-product-conformity-understanding-ecas-and-eqm-certification","②⑥"],
+ ["B-S38","A","AE","IOR UAE","ECAS certification UAE: what it is, who needs it","2026","https://ioruae.com/blog/ecas-certification-uae-guide","⑥"],
+ ["B-S69","B","AE","Gulf News","From Naruto dreams to Otaku District: Inside Abu Dhabi's MEFCC","2026-09-02","https://news.google.com/rss/articles/CBMi4AFBVV95cUxOVzljRk5fWTIwZlk2aUYtN1JVQXBTYU1xRWxPWUJSTnlMRGFKWkNfcW8ybnlHYlE3YXlwR3V3XzZqR0MtcS1hY09WQjQ2VWZoSk9KdXNOWTlNVTRWaWVRRFJoQUlwX2RYYlc5YTM3LUg0MnpMVWJyUWpBQVRFSFZyd2RENTRaSzZ4UjdyRzdFc0VfV0ppXzc1QVBCYzlZOTcwWXhTWG1vM2l0Yk45YkNUS1E1cTRMS2lnb1VIZ01Gam5ZZkh6dmZhcHhETVNLd29Obk1jcmdfdkpLR0x1Wk1rRNIB8AFBVV95cUxOdHBDQk1oSGFPMkItS2dfekpLeXpDMngtU1lrQ2d4aFJPRVpJalFGTnYzbHcxbjFCQ2h0MFRUWDU4ek8tNkFoejBIRGhQX0t4YzE4eVZYejF5RWNUWDNON2FxcHItYl9BZTFseVVNUWMyc1lwUzV5MWozRTZHRFBHendVQThNV0tzaWZpMVlvNjlsc2NoZU1kR2NrVTU2QUpjVmlNNG5rMXdKczlDcGFsa2hUT29rVXl6OGotTkI5TlpXS1JrWHJwdV9rMjhSN1YzSFRJRmg5WWN1c1loRjFTY2kxb2RaNDFDc0Z3R3k3X2U?oc=5","⑦"],
+ ["B-S67","B","AE","What's On","From fandom to phenomenon: The legacy of Middle East Film & Comic Con","2026-09-09","https://news.google.com/rss/articles/CBMimgFBVV95cUxQVE5uRE9xaEppT1ZMSjVMR2REQmlZX0FxTURtaW1UZzJoSkRDajFXNEg5eG5iYXU1SDVHOXg5RWdNU1VzSm9sNG44WGloUXhKMzQ2UGV4MGpJTUhlY2JIR05oTHNxR0ZkclJkSUZUcFkwTVdUTnRvZ1hjeThJVVd4TmNoWG5GS2lQLVltbTAyN0QxZ21BREdtX0p3?oc=5","⑦"],
+ ["B-S17","B","AE","Google Trends","fridge magnet / anime / labubu / sticker（AE，5 年）","2026-11-20","https://trends.google.com/trends/explore?geo=AE&date=today%205-y","①②"],
+ ["B-S35","B","TH","Google Trends","แม่เหล็กติดตู้เย็น / อาร์ตทอย / labubu / สติ๊กเกอร์（TH，5 年）","2026-11-20","https://trends.google.com/trends/explore?geo=TH&date=today%205-y","①②"],
+ ["B-S29","B","PH","Google Trends","ref magnet / anime merch / labubu / sticker（PH，5 年）","2026-11-20","https://trends.google.com/trends/explore?geo=PH&date=today%205-y","②"],
+ ["B-S19","B","AE","TikTok（经 Apify）","社媒检索 “dubai fridge magnet”：11 条","2026-11-20","https://www.tiktok.com/","②"],
+ ["B-S80","B","PH","TikTok（经 Apify）","社媒检索 “anime merch haul philippines”：15 条","2026-11-20","https://www.tiktok.com/","②"],
+ ["B-S18","B","TH","TikTok + YouTube（经 Apify）","社媒检索 “แม่เหล็กติดตู้เย็น”：13 条","2026-11-20","https://www.tiktok.com/","②"],
+ ["B-S28","C","AE","Google Shopping（Serper）","“anime fridge magnet”（AE）：40 个商品价格","2026-11-20","https://shopping.google.com/","④"],
+ ["B-S62","C","AE","Google Shopping（Serper）","“anime merch dubai”“fridge magnet dubai souvenir”：80 个商品价格","2026-11-20","https://shopping.google.com/","②④"],
+ ["B-S64","C","PH","Google Shopping（Serper）","“anime ref magnet philippines”：40 个商品价格","2026-11-20","https://shopping.google.com/","②④"],
+ ["B-S30","C","PH","Google Shopping（Serper）","“anime ref magnet”（PH）：40 个商品价格","2026-11-20","https://shopping.google.com/","④"],
+ ["B-S33","C","AE","Google 搜索（Serper）","“anime merch dubai”“fridge magnet dubai souvenir”自然排名","2026-11-20","https://www.google.com/","②"],
+ ["B-S36","C","PH","Meta 广告库（经 Apify）","关键词 “anime merch”（PH）：16 条","2026-11-20","https://www.facebook.com/ads/library/","②"],
+ ["B-S34","C","TH","Meta 广告库（经 Apify）","关键词 “แม่เหล็กติดตู้เย็น”（TH）：25 条","2026-11-20","https://www.facebook.com/ads/library/","⑥"],
+ ["B-S45","C","AE","Meta 广告库（经 Apify）","关键词 “anime”（AE）：25 条","2026-11-20","https://www.facebook.com/ads/library/","②"],
+ ["I-1","I","CN","浙江徕智家未来科技有限公司","《可交互浮空成像技术》汇报材料（技术参数、专利、团队、联合研发、财务预测）","2026-07-14","","②③④"],
+ ["I-2","I","CN","浙江徕智家未来科技有限公司","产品演示视频 2.mp4（工行红包浮空“福”字贴片）","2026","","②"],
+ ["I-3","I","CN","CMO 办公室","营销计划框架（优化版）v6：9 个模块与闭环","2026-11-12","","结构"]
+];
+
+/* ================= 状态 ================= */
+var state={total:10000,pct:DEFAULT_PCT.slice(),reg:DEFAULT_REG.slice(),A:{}};
+ASSUME.forEach(function(a){state.A[a.k]=a.v;});
+var amt={},K={};
+
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+function usd(v){return "$"+Math.round(v).toLocaleString("en-US");}
+function num(v){return Math.round(v).toLocaleString("en-US");}
+function big(v){return v>=1e6?(v/1e6).toFixed(2)+"M":v>=1e4?(v/1e3).toFixed(0)+"k":num(v);}
+
+/* ================= 计算 ================= */
+function compute(){
+  var t=state.total, s=state.pct.reduce(function(a,b){return a+b;},0)||1;
+  ITEMS.forEach(function(it,i){amt[it.k]=t*state.pct[i]/s;});
+  amt.total=t;
+  var A=state.A;
+  var ttImp=amt.ads*0.6/A.cpmTT*1000, mImp=amt.ads*0.4/A.cpmMeta*1000;
+  K.impr=ttImp+mImp;
+  K.clicks=ttImp*A.ctrTT/100+mImp*A.ctrMeta/100;
+  K.paidOrders=K.clicks*A.cvr/100;
+  K.pcreators=Math.floor(amt.creator*0.6/A.creatorFee);
+  K.gcreators=Math.floor(amt.samples*0.5/8);
+  K.b2bkits=Math.floor(amt.samples*0.5/25);
+  K.cviews=K.pcreators*A.views+K.gcreators*0.4*A.views*0.5;
+  K.ugc=K.pcreators+Math.round(K.gcreators*0.4);
+  K.creatorOrders=K.cviews*A.creatorConv/100;
+  K.ownedViews=amt.content*A.ownedViews;
+  K.ownedOrders=K.ownedViews*A.creatorConv/100;
+  K.orders=(K.paidOrders+K.creatorOrders+K.ownedOrders)*1.25;
+  K.customers=Math.round(K.orders*0.85);
+  K.community=Math.round(K.customers*2+K.gcreators*5+amt.community*1.0);
+  K.pilots=Math.round(K.b2bkits*A.b2bConv/100);
+  K.mql=K.b2bkits*2;
+  K.crev=K.orders*A.aov;
+  K.brev=K.pilots*A.b2bAvg;
+  K.revenue=K.crev+K.brev;
+  K.mer=K.revenue/t;
+  K.reach=K.impr+K.cviews+K.ownedViews;
+  K.cm=A.aov-3.2-5.0-1.3; K.cmr=K.cm/A.aov; K.ltv=K.cm*1.5; K.maxcac=K.ltv/1.5;
+  K.bep=t/0.5;
+  K.cac=(amt.ads+amt.creator+amt.samples*0.5)/Math.max(K.customers,1);
+}
+var KFMT={impr:big,cviews:big,reach:big,customers:num,community:num,pilots:num,b2bkits:num,ugc:num,pcreators:num,gcreators:num,mql:num,
+  revenue:usd,crev:usd,brev:usd,cm:function(v){return "$"+v.toFixed(2);},ltv:function(v){return "$"+v.toFixed(2);},maxcac:function(v){return "$"+v.toFixed(2);},
+  cmr:function(v){return (v*100).toFixed(0)+"%";},mer:function(v){return v.toFixed(2)+"x";},bep:usd,aov:function(){return "$"+state.A.aov.toFixed(2);},
+  b2bavg:function(){return usd(state.A.b2bAvg);},cac:usd,orders:num};
+
+/* ================= 渲染 ================= */
+function bindAll(){
+  var keys=ITEMS.map(function(i){return i.k;}).concat(["total"]);
+  var vals=keys.map(function(k){return amt[k];});
+  $$("[data-x]").forEach(function(el){
+    var ex=el.getAttribute("data-x");
+    try{var v=Function.apply(null,keys.concat(["return ("+ex+");"])).apply(null,vals);el.textContent=usd(v);}catch(e){el.textContent="?";}
+  });
+  $$("[data-kpi]").forEach(function(el){
+    var k=el.getAttribute("data-kpi"), f=KFMT[k]||num; el.textContent=f(K[k]);
+  });
+  var rs=state.reg.reduce(function(a,b){return a+b;},0)||1;
+  $$("[data-r]").forEach(function(el){
+    var i=REGIONS.findIndex(function(r){return r.k===el.getAttribute("data-r");});
+    el.textContent=usd(state.total*state.reg[i]/rs)+"（"+Math.round(state.reg[i]/rs*100)+"%）";
+  });
+  $("#totalInput").value=state.total; $("#totalRange").value=Math.min(state.total,100000); $("#totalTop").value=state.total;
+}
+function buildAlloc(){
+  var g=$("#allocGrid"); g.innerHTML="";
+  ITEMS.forEach(function(it,i){
+    g.insertAdjacentHTML("beforeend",
+     '<div class="nm"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:'+COLORS[i]+';margin-right:6px"></span>'+it.n+'<small>'+it.d+'</small></div>'+
+     '<input type="range" min="0" max="60" step="1" data-i="'+i+'" value="'+state.pct[i]+'">'+
+     '<div class="pc" id="pc'+i+'"></div><div class="am" id="am'+i+'"></div>');
+  });
+  $$("#allocGrid input").forEach(function(r){r.addEventListener("input",function(){setPct(+r.getAttribute("data-i"),+r.value);});});
+  var rg=$("#regionGrid"); rg.innerHTML="";
+  REGIONS.forEach(function(it,i){
+    rg.insertAdjacentHTML("beforeend",'<div class="nm">'+it.n+'</div><input type="range" min="0" max="80" step="1" data-j="'+i+'" value="'+state.reg[i]+'"><div class="pc" id="rp'+i+'"></div><div class="am" id="ra'+i+'"></div>');
+  });
+  $$("#regionGrid input").forEach(function(r){r.addEventListener("input",function(){setReg(+r.getAttribute("data-j"),+r.value);});});
+  var ag=$("#assumeGrid"); ag.innerHTML="";
+  ASSUME.forEach(function(a){
+    ag.insertAdjacentHTML("beforeend",'<div><label>'+a.n+'</label><input type="number" step="any" data-a="'+a.k+'" value="'+a.v+'"></div>');
+  });
+  $$("#assumeGrid input").forEach(function(inp){inp.addEventListener("input",function(){var v=parseFloat(inp.value);if(isFinite(v)&&v>0){state.A[inp.getAttribute("data-a")]=v;update();}});});
+}
+function rebalance(arr,i,v){
+  v=Math.max(0,Math.min(100,v));
+  var others=0; arr.forEach(function(x,j){if(j!==i)others+=x;});
+  var rest=100-v;
+  arr.forEach(function(x,j){if(j!==i)arr[j]=others>0?x/others*rest:rest/(arr.length-1);});
+  arr[i]=v;
+  // round to 0.1
+  for(var j=0;j<arr.length;j++)arr[j]=Math.round(arr[j]*10)/10;
+}
+function setPct(i,v){rebalance(state.pct,i,v);update();}
+function setReg(i,v){rebalance(state.reg,i,v);update();}
+function setTotal(v){v=Math.round(+v);if(!isFinite(v)||v<500)return;state.total=v;update();}
+
+function renderTables(){
+  ITEMS.forEach(function(it,i){$("#pc"+i).textContent=state.pct[i].toFixed(1)+"%";$("#am"+i).textContent=usd(amt[it.k]);
+    var r=$('#allocGrid input[data-i="'+i+'"]'); if(document.activeElement!==r) r.value=state.pct[i];});
+  var s=state.pct.reduce(function(a,b){return a+b;},0);
+  $("#sumLine").innerHTML="合计 <b>"+s.toFixed(1)+"%</b> = <b>"+usd(state.total)+"</b>"+(Math.abs(s-100)>0.6?' <span class="bad">（已按比例归一）</span>':"")+"；拖动任一科目时，其余科目按原比例自动调整，合计保持 100%。";
+  var rs=state.reg.reduce(function(a,b){return a+b;},0)||1;
+  REGIONS.forEach(function(it,i){$("#rp"+i).textContent=(state.reg[i]/rs*100).toFixed(1)+"%";$("#ra"+i).textContent=usd(state.total*state.reg[i]/rs);
+    var r=$('#regionGrid input[data-j="'+i+'"]'); if(document.activeElement!==r) r.value=state.reg[i];});
+  $("#regionSum").innerHTML="区域合计 <b>"+rs.toFixed(1)+"%</b>。区域份额只用于分配营销投入，不改变科目结构。";
+  // budget table
+  var h='<tr><th>科目</th><th>用途</th><th class="num">占比</th><th class="num">金额</th><th class="num">P0</th><th class="num">P1</th><th class="num">P2</th><th class="num">P3</th><th>考核 KPI</th></tr>';
+  var ph={P0:0,P1:0,P2:0,P3:0};
+  ITEMS.forEach(function(it,i){
+    var m=monthly(it,i), p={P0:0,P1:0,P2:0,P3:0}; m.forEach(function(v,j){p[PHASE[j]]+=v;ph[PHASE[j]]+=v;});
+    h+='<tr><td><b>'+it.n+'</b></td><td class="small">'+it.d+'</td><td class="num">'+(state.pct[i]).toFixed(1)+'%</td><td class="num"><b>'+usd(amt[it.k])+'</b></td><td class="num">'+usd(p.P0)+'</td><td class="num">'+usd(p.P1)+'</td><td class="num">'+usd(p.P2)+'</td><td class="num">'+usd(p.P3)+'</td><td class="small">'+it.kpi+'</td></tr>';
+  });
+  h+='<tr style="background:#f5f6ff"><td><b>合计</b></td><td></td><td class="num">100%</td><td class="num"><b>'+usd(state.total)+'</b></td><td class="num">'+usd(ph.P0)+'</td><td class="num">'+usd(ph.P1)+'</td><td class="num">'+usd(ph.P2)+'</td><td class="num">'+usd(ph.P3)+'</td><td></td></tr>';
+  $("#budgetTable").innerHTML=h;
+  // month table
+  var mh='<tr><th>科目</th>'+MONTHS.map(function(m,j){return '<th class="num" style="border-top:3px solid '+PHASE_COLOR[PHASE[j]]+'">'+m.slice(2)+'<br><span class="muted">'+PHASE[j]+'</span></th>';}).join("")+'<th class="num">合计</th></tr>';
+  var col=MONTHS.map(function(){return 0;});
+  ITEMS.forEach(function(it,i){var m=monthly(it,i);mh+='<tr><td>'+it.n+'</td>'+m.map(function(v,j){col[j]+=v;return '<td class="num">'+num(v)+'</td>';}).join("")+'<td class="num"><b>'+num(amt[it.k])+'</b></td></tr>';});
+  mh+='<tr style="background:#f5f6ff"><td><b>月合计</b></td>'+col.map(function(v){return '<td class="num"><b>'+num(v)+'</b></td>';}).join("")+'<td class="num"><b>'+num(state.total)+'</b></td></tr>';
+  $("#monthTable").innerHTML=mh;
+  window.__monthCol=col;
+  // calendar budgets
+  var ct='<tr><th>月份</th><th>阶段</th><th>主题 / 战役</th><th>重点产品</th><th>关键节点（C 端 / B 端）</th><th>主市场</th><th class="num">当月预算</th></tr>';
+  CAL.forEach(function(c,j){ct+='<tr><td><b>'+MONTHS[j]+'</b></td><td><span class="pill" style="background:'+PHASE_COLOR[PHASE[j]]+'22;color:'+PHASE_COLOR[PHASE[j]]+'">'+PHASE[j]+'</span></td><td>'+c[0]+'</td><td class="small">'+c[1]+'</td><td class="small">'+c[2]+'</td><td class="small">'+c[3]+'</td><td class="num"><b>'+usd(col[j])+'</b></td></tr>';});
+  $("#calTable").innerHTML=ct;
+  // KPI table
+  var A=state.A;
+  var rows=[
+   ["付费曝光","广告 "+usd(amt.ads)+"：TikTok 60% @ $"+A.cpmTT+" CPM；Meta 40% @ $"+A.cpmMeta,big(K.impr)],
+   ["付费点击","TikTok CTR "+A.ctrTT+"%；Meta CTR "+A.ctrMeta+"%",num(K.clicks)],
+   ["付费订单","点击 × CVR "+A.cvr+"%",num(K.paidOrders)],
+   ["付费达人 / 寄样达人","达人预算 60% ÷ $"+A.creatorFee+"；寄样预算 50% ÷ $8 / 套",num(K.pcreators)+" / "+num(K.gcreators)],
+   ["达人播放 / UGC","单条均播放 "+num(A.views)+"；寄样达人发布率 40%",big(K.cviews)+" / "+num(K.ugc)+" 条"],
+   ["自有内容播放","内容预算 × "+A.ownedViews+" 播放 / $",big(K.ownedViews)],
+   ["C 端订单","（付费 + 达人 + 自有）× 1.25 口碑系数",num(K.orders)],
+   ["付费种子用户","订单 × 0.85（去重）",num(K.customers)],
+   ["混合 CAC","（广告 + 达人 + 寄样 50%）÷ 新客",usd(K.cac)],
+   ["B 端样品包 → 试点","样品预算 50% ÷ $25 / 套 × "+A.b2bConv+"%",num(K.b2bkits)+" → "+num(K.pilots)],
+   ["C 端收入","订单 × AOV $"+A.aov,usd(K.crev)],
+   ["B 端收入","试点 × $"+num(A.b2bAvg),usd(K.brev)],
+   ["总收入 / MER","收入 ÷ 总预算",usd(K.revenue)+" / "+K.mer.toFixed(2)+"x"]
+  ];
+  $("#kpiTable").innerHTML='<tr><th>指标</th><th>计算口径（假设可调）</th><th class="num">预测值</th></tr>'+rows.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td class="small">'+r[1]+'</td><td class="num"><b>'+r[2]+'</b></td></tr>';}).join("");
+}
+function monthly(it,i){var s=it.w.reduce(function(a,b){return a+b;},0);return it.w.map(function(w){return amt[it.k]*w/s;});}
+
+/* ================= SVG 图表 ================= */
+function svg(w,h,inner){return '<svg viewBox="0 0 '+w+' '+h+'" width="100%" style="display:block;font-family:inherit">'+inner+'</svg>';}
+function lineChart(el,data,ymax){
+  var W=520,H=230,L=36,R=12,T=12,B=28,iw=W-L-R,ih=H-T-B,n=data.labels.length;
+  var mx=ymax||Math.max.apply(null,data.series.map(function(s){return Math.max.apply(null,s.d);}))*1.1;
+  var g="";
+  for(var k=0;k<=4;k++){var y=T+ih-ih*k/4;g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y+'" y2="'+y+'" stroke="#eef0f6"/><text x="'+(L-6)+'" y="'+(y+4)+'" font-size="10" fill="#8a92ad" text-anchor="end">'+Math.round(mx*k/4)+'</text>';}
+  data.labels.forEach(function(l,i){var x=L+iw*i/(n-1);g+='<text x="'+x+'" y="'+(H-8)+'" font-size="10.5" fill="#6b7393" text-anchor="middle">'+l+'</text>';});
+  data.series.forEach(function(s){
+    var pts=s.d.map(function(v,i){return [L+iw*i/(n-1),T+ih-ih*v/mx];});
+    g+='<polyline fill="none" stroke="'+s.c+'" stroke-width="2.6" points="'+pts.map(function(p){return p.join(",");}).join(" ")+'"/>';
+    pts.forEach(function(p,i){g+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3.2" fill="#fff" stroke="'+s.c+'" stroke-width="2"><title>'+s.n+' '+data.labels[i]+'：'+s.d[i]+'</title></circle>';});
+  });
+  el.innerHTML=svg(W,H,g)+'<div class="legend">'+data.series.map(function(s){return '<span><i style="background:'+s.c+'"></i>'+s.n+'</span>';}).join("")+'</div>';
+}
+function tradeChart(el){
+  var W=520,H=220,L=40,T=14,B=30,iw=440,ih=H-T-B,mx=140,g="",bw=46;
+  for(var k=0;k<=4;k++){var y=T+ih-ih*k/4;g+='<line x1="'+L+'" x2="'+(L+iw)+'" y1="'+y+'" y2="'+y+'" stroke="#eef0f6"/><text x="'+(L-6)+'" y="'+(y+4)+'" font-size="10" fill="#8a92ad" text-anchor="end">'+(mx*k/4)+'</text>';}
+  TRADE.years.forEach(function(yr,i){
+    var cx=L+70+i*150, ha=ih*TRADE.all[i]/mx, hc=ih*TRADE.cn[i]/mx;
+    g+='<rect x="'+(cx-bw)+'" y="'+(T+ih-ha)+'" width="'+bw+'" height="'+ha+'" rx="4" fill="#c9cdf7"/><rect x="'+(cx+4)+'" y="'+(T+ih-hc)+'" width="'+bw+'" height="'+hc+'" rx="4" fill="#5b5bf7"/>';
+    g+='<text x="'+(cx-bw/2)+'" y="'+(T+ih-ha-4)+'" font-size="10" text-anchor="middle" fill="#4a5370">'+TRADE.all[i]+'</text><text x="'+(cx+4+bw/2)+'" y="'+(T+ih-hc-4)+'" font-size="10" text-anchor="middle" fill="#3a3ac0">'+TRADE.cn[i]+'</text>';
+    g+='<text x="'+cx+'" y="'+(H-10)+'" font-size="11" text-anchor="middle" fill="#4a5370">'+yr+'（中国 '+Math.round(TRADE.cn[i]/TRADE.all[i]*1000)/10+'%）</text>';
+  });
+  el.innerHTML=svg(W,H,g)+'<div class="legend"><span><i style="background:#c9cdf7"></i>全部国家（百万美元）</span><span><i style="background:#5b5bf7"></i>自中国</span></div>';
+}
+function priceChart(el){
+  var W=560,rowH=26,L=210,R=20,T=10,H=T+PRICE.length*rowH+26,iw=W-L-R,mx=22,g="";
+  for(var k=0;k<=4;k++){var x=L+iw*k/4;g+='<line x1="'+x+'" x2="'+x+'" y1="'+T+'" y2="'+(H-22)+'" stroke="#eef0f6"/><text x="'+x+'" y="'+(H-8)+'" font-size="10" fill="#8a92ad" text-anchor="middle">$'+(mx*k/4)+'</text>';}
+  PRICE.forEach(function(p,i){
+    var y=T+i*rowH+rowH/2, x1=L+iw*Math.min(p.p[0],mx)/mx, x2=L+iw*Math.min(p.p[2],mx)/mx, xm=L+iw*Math.min(p.p[1],mx)/mx;
+    g+='<text x="'+(L-8)+'" y="'+(y+4)+'" font-size="11" text-anchor="end" fill="'+(i===PRICE.length-1?"#127a50":"#3b4363")+'" font-weight="'+(i===PRICE.length-1?"700":"400")+'">'+p.n+'</text>';
+    g+='<line x1="'+x1+'" x2="'+Math.max(x2,x1+2)+'" y1="'+y+'" y2="'+y+'" stroke="'+p.c+'" stroke-width="8" stroke-linecap="round" opacity=".35"/><circle cx="'+xm+'" cy="'+y+'" r="5.5" fill="'+p.c+'"><title>'+p.n+'：P25 $'+p.p[0]+'，中位 $'+p.p[1]+'，P75 $'+p.p[2]+'</title></circle><text x="'+(Math.max(x2,xm)+8)+'" y="'+(y+4)+'" font-size="10.5" fill="#6b7393">$'+p.p[1]+'</text>';
+  });
+  el.innerHTML=svg(W,H,g);
+}
+function donut(el){
+  var W=520,H=230,cx=115,cy=115,r=90,ri=56,a0=-Math.PI/2,g="",tot=ITEMS.reduce(function(s,it){return s+amt[it.k];},0);
+  ITEMS.forEach(function(it,i){
+    var a=amt[it.k]/tot*Math.PI*2, a1=a0+a, la=a>Math.PI?1:0;
+    if(a>0.0001){
+      var p=function(rr,ang){return [cx+rr*Math.cos(ang),cy+rr*Math.sin(ang)];};
+      var s1=p(r,a0),e1=p(r,a1-0.0001),s2=p(ri,a1-0.0001),e2=p(ri,a0);
+      g+='<path d="M'+s1+' A'+r+','+r+' 0 '+la+' 1 '+e1+' L'+s2+' A'+ri+','+ri+' 0 '+la+' 0 '+e2+' Z" fill="'+COLORS[i]+'"><title>'+it.n+' '+usd(amt[it.k])+'</title></path>';
+    }
+    a0=a1;
+    var ly=24+i*24;
+    g+='<rect x="250" y="'+(ly-10)+'" width="11" height="11" rx="2" fill="'+COLORS[i]+'"/><text x="268" y="'+ly+'" font-size="12" fill="#2c3555">'+it.n+'</text><text x="505" y="'+ly+'" font-size="12" fill="#2c3555" text-anchor="end" font-weight="700">'+usd(amt[it.k])+'</text>';
+  });
+  g+='<text x="'+cx+'" y="'+(cy-4)+'" font-size="11" text-anchor="middle" fill="#7a839e">年度总预算</text><text x="'+cx+'" y="'+(cy+16)+'" font-size="18" font-weight="800" text-anchor="middle" fill="#1b2133">'+usd(state.total)+'</text>';
+  el.innerHTML=svg(W,H,g);
+}
+function monthlyChart(el){
+  var W=560,H=240,L=46,T=12,B=34,iw=W-L-14,ih=H-T-B,n=MONTHS.length,bw=iw/n*0.66,g="";
+  var stacks=ITEMS.map(function(it,i){return monthly(it,i);});
+  var tot=MONTHS.map(function(_,j){return stacks.reduce(function(s,m){return s+m[j];},0);});
+  var mx=Math.max.apply(null,tot)*1.12||1;
+  for(var k=0;k<=4;k++){var y=T+ih-ih*k/4;g+='<line x1="'+L+'" x2="'+(W-14)+'" y1="'+y+'" y2="'+y+'" stroke="#eef0f6"/><text x="'+(L-6)+'" y="'+(y+4)+'" font-size="10" fill="#8a92ad" text-anchor="end">'+big(mx*k/4)+'</text>';}
+  MONTHS.forEach(function(m,j){
+    var x=L+iw*j/n+(iw/n-bw)/2, y=T+ih;
+    stacks.forEach(function(st,i){var h=ih*st[j]/mx; y-=h; g+='<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+h+'" fill="'+COLORS[i]+'"><title>'+m+' '+ITEMS[i].n+' '+usd(st[j])+'</title></rect>';});
+    g+='<text x="'+(x+bw/2)+'" y="'+(H-18)+'" font-size="9.5" text-anchor="middle" fill="#6b7393">'+m.slice(2)+'</text><rect x="'+x+'" y="'+(H-12)+'" width="'+bw+'" height="4" rx="2" fill="'+PHASE_COLOR[PHASE[j]]+'"/>';
+  });
+  el.innerHTML=svg(W,H,g)+'<div class="legend"><span><i style="background:#9aa3c0"></i>P0 准备</span><span><i style="background:#18c3d6"></i>P1 软启动</span><span><i style="background:#5b5bf7"></i>P2 发布</span><span><i style="background:#ff5c8a"></i>P3 旺季</span></div>';
+}
+
+/* ================= 来源表 ================= */
+function renderSources(f){
+  var h='<tr><th>编号</th><th>层级</th><th>国家</th><th>发布方 / 渠道</th><th>标题 / 内容</th><th>日期</th><th>用于</th></tr>';
+  var L={A:"A 权威报告",B:"B 行为数据",C:"C 竞品数据",I:"I 内部资料"};
+  var cls={A:"pill",B:"pill c",C:"pill h",I:"pill gray"};
+  SOURCES.forEach(function(s){
+    if(f&&f!=="all"&&s[1]!==f)return;
+    var t=s[6]?'<a href="'+s[6]+'" target="_blank" rel="noopener">'+s[4]+'</a>':s[4];
+    h+='<tr><td>'+s[0]+'</td><td><span class="'+cls[s[1]]+'">'+L[s[1]]+'</span></td><td>'+s[2]+'</td><td>'+s[3]+'</td><td>'+t+'</td><td style="white-space:nowrap">'+s[5]+'</td><td>'+s[7]+'</td></tr>';
+  });
+  $("#srcTable").innerHTML=h;
+}
+
+/* ================= 主流程 ================= */
+function update(){compute();renderTables();bindAll();donut($("#chartDonut"));monthlyChart($("#chartMonthly"));}
+function init(){
+  buildAlloc();
+  $("#totalInput").addEventListener("input",function(e){setTotal(e.target.value);});
+  $("#totalTop").addEventListener("input",function(e){setTotal(e.target.value);});
+  $("#totalRange").addEventListener("input",function(e){setTotal(e.target.value);});
+  $$(".presets button[data-p]").forEach(function(b){b.addEventListener("click",function(){setTotal(b.getAttribute("data-p"));});});
+  $("#resetAlloc").addEventListener("click",function(){state.pct=DEFAULT_PCT.slice();state.reg=DEFAULT_REG.slice();update();});
+  $$("#srcFilter button").forEach(function(b){b.addEventListener("click",function(){renderSources(b.getAttribute("data-f"));});});
+  tradeChart($("#chartTrade")); lineChart($("#chartSticker"),STICKER,100); lineChart($("#chartLabubu"),LABUBU,30); priceChart($("#chartPrice"));
+  renderSources("all");
+  update();
+  // nav active
+  var links=$$(".side a[href^='#']"), secs=links.map(function(a){return document.querySelector(a.getAttribute("href"));});
+  window.addEventListener("scroll",function(){var y=window.scrollY+120,idx=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)idx=i;});links.forEach(function(a,i){a.classList.toggle("active",i===idx);});},{passive:true});
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
+</script>
+</body>
+</html>
